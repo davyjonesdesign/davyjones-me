@@ -146,7 +146,9 @@ const data = [
         linkDescription: "Full Website",
       },
     ],
-    description: ["tester"],
+    description: [
+      "For this project, I set out to create a user experience that critiques the way mainstream news networks frame information to conform to a singular narrow narrative. I decided to do this through the use of satire and created a mock website for a fake group of boaters and dolphins who were united in their negative views of sharks. My hopes were that the ridiculous characterizations and off-based reasoning of the boaters and dolphins would be familiar to users as similar tactics heard on mainstream news. After working through this project, I believe I will definitely continue to use creative code as a design tool for future projects and not just a developing tool. If I could do this project again, I think I would rely more on using p5 instead of Vue to set up the pages, buttons, and interaction. I think p5 would have allowed me to implement more organic imagery and interactions.",
+    ],
   },
   {
     alias: "airbnb",

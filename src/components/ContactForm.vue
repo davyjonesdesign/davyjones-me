@@ -24,7 +24,7 @@
             class="input"
             name="nameFirst"
             placeholder="First Name"
-            v-model="name_first"
+            v-model="fname"
           />
         </div>
 
@@ -35,7 +35,7 @@
             class="input"
             name="nameLast"
             placeholder="Last Name"
-            v-model="name_last"
+            v-model="lname"
           />
         </div>
       </div>
@@ -84,8 +84,8 @@ export default {
   data() {
     return {
       contacts: [],
-      name_first: "",
-      name_last: "",
+      fname: "",
+      lname: "",
       email: "",
       message: "",
       errors: [],
@@ -100,10 +100,10 @@ export default {
     // },
     sendEmail(e) {
       this.errors = [];
-      if (!this.name_first) {
+      if (!this.fname) {
         this.errors.push("First name required");
       }
-      if (!this.name_last) {
+      if (!this.lname) {
         this.errors.push("Last name required");
       }
       if (!this.email) {
@@ -116,8 +116,8 @@ export default {
             e.target,
             "GdpZ57Y22GfDzj08_",
             {
-              name_first: this.name_first,
-              name_last: this.name_last,
+              fname: this.fname,
+              lname: this.lname,
               email: this.email,
               message: this.message,
             }
@@ -130,8 +130,8 @@ export default {
           console.log({ error });
         }
       // Reset form field
-      // this.name_first = ''
-      // this.name_last = ''
+      // this.fname = ''
+      // this.lname = ''
       // this.email = ''
       // this.message = ''
     },
