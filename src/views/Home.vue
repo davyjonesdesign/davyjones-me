@@ -11,15 +11,16 @@
     <!-- <ToolBox /> -->
 
     <div class="port-container_home" id="work">
+      <intersection-observer
+        sentinal-name="sentinal-name"
+        @on-intersection-element="onIntersectionElement1"
+      ></intersection-observer>
       <h1>My Work</h1>
       <p>
         I've worked on many projects from branding, print, UX/UI Design, web
         development, motion graphics, video, and more.
       </p>
-      <intersection-observer
-        sentinal-name="sentinal-name"
-        @on-intersection-element="onIntersectionElement1"
-      ></intersection-observer>
+      
       <PortCarousel />
       <router-link class="link link-btn splash-btn" to="/portfolio">
         <div class="nav-link_text">See my work</div>
@@ -31,28 +32,24 @@
         @on-intersection-element="onIntersectionElement2"
       ></intersection-observer>
       <h1>About me</h1>
+      
       <div class="about-dets">
         <div class="about-dets_content">
-          <p>
-            I've been in the graphic and web design world for 6 years and have filled many roles while operating a design practice and working on a Masters Program. 
-          </p>
+          <p>I've been in the graphic and web design world for 6 years and have filled many roles while operating a design practice and working on a Masters Program.</p>
         </div>
-
         <ToolBox />
       </div>
-
-     
       <router-link class="link link-btn splash-btn" to="/about">
         <div class="nav-link_text">Learn about me</div>
       </router-link>
     </div>
     <div class="footer">
+      <Foot id="foot"/>
       <intersection-observer
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement3"
       ></intersection-observer>
-      <Foot id="foot" />
-      
+      <div class="bot-sp"></div>
     </div>
 
     <div class="scrollers">
@@ -148,22 +145,22 @@ export default {
       this.isActive3 = false;
     },
     myFilter1() {
-      this.isActive1 = true;
       this.isActive = false;
+      this.isActive1 = true;
       this.isActive2 = false;
       this.isActive3 = false;
     },
     myFilter2() {
-      this.isActive2 = true;
-      this.isActive1 = false;
       this.isActive = false;
+      this.isActive1 = false;
+      this.isActive2 = true;
       this.isActive3 = false;
     },
     myFilter3() {
-      this.isActive3 = true;
-      this.isActive2 = false;
-      this.isActive1 = false;
       this.isActive = false;
+      this.isActive1 = false;
+      this.isActive2 = false;
+      this.isActive3 = true;
     },
     onIntersectionElement(value) {
       this.myFilter();
@@ -185,6 +182,14 @@ export default {
 };
 </script>
 <style>
+#foot {
+  height: 99vh;
+
+}
+.bot-sp {
+  height: 1vh;
+  background: var(--menuBack);
+}
 .home::-webkit-scrollbar {
   display: none;
 }
@@ -250,17 +255,32 @@ export default {
 }
 @media (max-width: 960px) {
   .scrollers {
-    display: none;
+    /* left: 5px; */
+  }
+  .scrollers a {
+    /* display: none; */
+    /* left: 1px; */
+    margin: 5px 5px
   }
   .about-dets {
     flex-direction: column;
   }
   .port-container_home,
   .about-home {
-    margin: 0 20px;
+    margin: 0 50px 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .scrollers {
+    display: none;
+  }
+  .port-container_home,
+  .about-home {
+    margin: 0 20px 0 20px;
   }
 }
 @media (max-height: 450px) {
+  
   .about-dets {
     flex-direction: row;
   }

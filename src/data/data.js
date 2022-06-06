@@ -3,7 +3,7 @@ const data = [
     alias: "breakfast",
     title: "breakfast",
     subtitle: "digital illustration",
-    date: "Spring 2021",
+    date: "Spring 2022",
     tag: ["digital illustration", "typography"],
     img: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-square.png",
     imgDim: "square",
@@ -22,8 +22,7 @@ const data = [
       },
     ],
     description: [
-      "The intension behind this piece is an accessible and unique digital instrument. This instrument would have audial output and analogous visual expressions. I recorded some sounds and settled on a few of my wife’s hums and whistles.",
-      "I then used the P5 library to load sounds and connected their levels to expanding rectangles. Colorful rectangles pop on top of the muted, gray background. By pressing the parallel keystrokes, the user can hear and see the results.",
+      "A recent assignment from the Typography course was to select a word and depict it on a mural wall in a way that emphasizes its meaning. I selected “breakfast” and replaced each letter with a hand-drawn breakfast item. I wanted it to feel fun, playful, and filling — as if you are being treated to a big breakfast buffet!",
     ],
   },
   {

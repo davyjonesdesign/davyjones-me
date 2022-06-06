@@ -151,7 +151,7 @@ export default {
 
 @media (max-width: 960px) {
   .home-text {
-    margin: 0 60px 0 20px;
+    margin: 0 60px 0 35px;
   }
   .home-text h2 {
     font-size: 2.5rem;

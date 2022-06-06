@@ -91,10 +91,6 @@
       @on-intersection-element="onIntersectionElement"
     ></intersection-observer>
     <Foot id="foot" />
-    <intersection-observer
-      sentinal-name="sentinal-name"
-      @on-intersection-element="onIntersectionElement1"
-    ></intersection-observer>
   </div>
 </template>
 <script>
@@ -121,10 +117,6 @@ export default {
   },
   methods: {
     onIntersectionElement(value) {
-      this.isActive = !this.isActive;
-      this.isIntersectingElement = value;
-    },
-    onIntersectionElement1(value) {
       this.isActive = !this.isActive;
       this.isIntersectingElement = value;
     }
