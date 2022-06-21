@@ -65,9 +65,9 @@ export default {
         constructor(_loc) {
           var loc = _loc.copy();
           var vel = p5.createVector(p5.random(-1, 1), p5.random(-2, 0));
-          var acc = p5.createVector(0, 0.05);
-          var lifespan = 255;
-          var h = p5.random(230, 255);
+          var acc = p5.createVector(0, 0.03);
+          var lifespan = 200;
+          var h = p5.random(225, 255);
           var sz = p5.random(10, 80);
 
           // Method to update location
@@ -79,7 +79,7 @@ export default {
 
           // Method to display
           this.paint = function () {
-            p5.stroke(100, 175, h, lifespan);
+            p5.stroke(75, 150, h, lifespan);
             p5.strokeWeight(1);
             p5.fill(220, 220, h, lifespan);
             p5.ellipse(loc.x, loc.y, sz, sz);

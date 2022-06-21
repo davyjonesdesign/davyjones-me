@@ -144,6 +144,9 @@ html {
   color: rgba(255, 255, 255, 1);
   background: var(--off);
 }
+html::-webkit-scrollbar {
+  display: none;
+}
 /* canvas {
   margin: 0;
   padding: 0;
@@ -341,7 +344,7 @@ ul.sidebar-panel-nav > li > a {
     top: 0;
     align-items: center;
     padding: 7px 10px 10px;
-    margin: 2px;
+    margin: 10px;
     height: auto;
     z-index: 100;
     background: var(--logo-reverse);

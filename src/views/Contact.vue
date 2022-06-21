@@ -65,18 +65,18 @@ export default {
 }
 @media (max-width: 960px) {
   .content-wrapper {
-    margin: 0px 25px 0 15px;
+    margin: 0px 20px 0;
     padding: 0 0 20px;
     justify-content: flex-start;
     height: 100%;
   }
   .form-container {
-    margin: 0px 0 5px;
+    margin: 0px;
     padding: 20px 15px;
   }
   .header-block {
-    padding: 15px 50px 15px 0;
-    margin: 0 0 10px;
+    padding: 20px 60px 20px 0;
+    margin: 0 0 0px;
   }
   .header-block h1 {
     margin: 0;
@@ -84,7 +84,7 @@ export default {
 }
 @media (max-width: 480px) {
   .form-container {
-    margin: 20px 5px 5px;
+    margin: 20px 0;
     padding: 20px 15px;
   }
 }

@@ -65,9 +65,9 @@ export default {
         constructor(_loc) {
           var loc = _loc.copy();
           var vel = p5.createVector(p5.random(-1, 1), p5.random(-2, 0));
-          var acc = p5.createVector(0, 0.04);
-          var lifespan = 255;
-          var h = p5.random(100, 200);
+          var acc = p5.createVector(0, 0.03);
+          var lifespan = 200;
+          var h = p5.random(100, 225);
           var sz = p5.random(10, 80);
 
           // Method to update location

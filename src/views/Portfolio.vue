@@ -244,7 +244,7 @@ export default {
     /* padding: 80px 10px 20px; */
   }
   .header-block {
-    padding: 15px 50px 15px 0;
+    padding: 20px 60px 20px 0;
     margin: 0 0 10px;
   }
   .header-block h1 {
@@ -253,8 +253,8 @@ export default {
 }
 @media (max-width: 600px) {
   .myWork-wrapper {
-    margin: 0 15px 0 10px;
-    /* padding: 80px 10px 20px; */
+    padding: 0 20px;
+    margin: 0;
   }
   
 }

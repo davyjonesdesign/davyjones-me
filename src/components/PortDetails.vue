@@ -1,5 +1,5 @@
 <template>
-  <div id="top">
+  <div>
     <div v-if="port" class="port-wrapper">
       <div class="det-splash" :class="{ hideDetSplash: isActive }">
         <img
@@ -52,7 +52,7 @@
       <!-- header -->
       <div class="det-header">
         <div>
-          <h3 class="port-title">{{ port.title }}</h3>
+          <h3 class="port-title" id="top">{{ port.title }}</h3>
           <!-- <router-link class="back-link" to="/portfolio">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.97058 20"><g id="a"/><g id="b"><g id="c"><polygon class="d" points="16.97058 8.48529 8.48529 0 0 8.48529 5.24298 8.48529 5.24298 20 11.24298 20 11.24298 8.48529 16.97058 8.48529"/></g></g></svg>
             Back

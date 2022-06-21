@@ -51,8 +51,30 @@
       ></intersection-observer>
       <div class="bot-sp"></div>
     </div>
-
+    
     <div class="scrollers">
+      <router-link
+        to="#splash"
+        :class="{ active: isActive }"
+      >
+      </router-link>
+      <router-link
+        to="#work"
+        :class="{ active: isActive1 }"
+      >
+      </router-link>
+      <router-link
+        to="#about"
+        :class="{ active: isActive2 }"
+      >
+      </router-link>
+      <router-link
+        to="#foot"
+        :class="{ active: isActive3 }"
+      >
+      </router-link>
+    </div>
+    <div class="scrollers-b">
       <router-link
         to="#splash"
         :class="{ active: isActive }"
@@ -230,6 +252,10 @@ export default {
   display: flex;
   flex-direction: column;
   z-index: 130;
+  
+}
+.scrollers-b {
+  display: none;
 }
 .scrollers a {
   width: 10px;
@@ -238,8 +264,11 @@ export default {
   background: var(--heavy);
   border-radius: 100%;
 }
-.scrollers a:hover {
+/* .scrollers a:hover {
   background: var(--text);
+} */
+.scrollers a:hover {
+  cursor: default;
 }
 .scrollers .active {
   background: var(--text);

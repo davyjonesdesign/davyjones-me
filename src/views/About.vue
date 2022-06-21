@@ -168,9 +168,10 @@ export default {
   font-weight: 600;
   padding: 15px 0 0;
 }
-.about-content h1 {
+.about-content {
   /* padding: 20px 0 0; */
   /* width: 50%; */
+  padding-top: 20px;
 }
 .about-img {
   position: fixed;
@@ -207,6 +208,8 @@ export default {
   .about-content {
     margin: 20px;
     width: 100%;
+    padding-top: 0;
+
   }
   .form-container {
     margin: 0px 0px 20px;
@@ -230,7 +233,7 @@ export default {
     flex-flow: column;
   }
   .header-block {
-    padding: 15px 50px 15px 0;
+    padding: 20px 60px 20px 0;
     margin: 0 0 150px;
   }
   .header-block h1 {

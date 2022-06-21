@@ -3,7 +3,7 @@ class Particle {
     var loc = _loc.copy();
     var vel = p5.createVector(p5.random(-1, 1), p5.random(-2, 0));
     var acc = p5.createVector(0, 0.05);
-    var lifespan = 255;
+    var lifespan = 200;
     var h = p5.random(175, 250);
     var sz = p5.random(10, 80);
 
