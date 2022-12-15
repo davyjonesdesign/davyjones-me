@@ -10,7 +10,7 @@
         ><span class="char-hover">o</span><span class="char-hover">n</span
         ><span class="char-hover">e</span><span class="char-hover">s</span>
       </h2>
-      <h3>I do graphic and web design.</h3>
+      <h3>I am a graphic and web designer with some web development experience.</h3>
       <router-link class="link link-btn splash-btn" to="/contact">
         <div class="nav-link_text">Connect with me!</div>
       </router-link>
