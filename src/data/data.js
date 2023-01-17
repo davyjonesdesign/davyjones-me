@@ -1,152 +1,59 @@
 const data = [
   {
-    alias: "breakfast",
-    title: "breakfast",
-    subtitle: "digital illustration",
-    date: "Spring 2022",
-    tag: ["digital illustration", "typography"],
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-square.png",
-    imgDim: "square",
-    imgs: [
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-mural-mockup.jpg",
-        title: "Breakfast Mural Mockup",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-square.png",
-        title: "Breakfast",
-        width: "40vw",
-        dimension: "square",
-      },
-    ],
-    description: [
-      "A recent assignment from the Typography course was to select a word and depict it on a mural wall in a way that emphasizes its meaning. I selected “breakfast” and replaced each letter with a hand-drawn breakfast item. I wanted it to feel fun, playful, and filling — as if you are being treated to a big breakfast buffet!",
-    ],
-  },
-  {
-    alias: "hums-whistles",
-    title: "hums & whistles",
-    subtitle: "digital instrument",
+    alias: "watermark",
+    title: "watermark web app",
+    subtitle: "branding, web design & programming",
     date: "Spring 2021",
-    tag: ["dev/programming"],
+    tag: ["branding", "ux/ui design", "dev/programming", "vue"],
     imgDim: "rect",
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/home.jpg",
     imgs: [
       {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
-        title: "Hums & Whistles",
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/home.jpg",
+        title: "Watermark Home Page",
         width: "40vw",
         dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/study.jpg",
+        title: "Watermark Study Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/resources.jpg",
+        title: "Watermark Resources Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/home-m.png",
+        title: "Watermark Mobile Home Page",
+        width: "40vw",
+        dimension: "portrait",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/study-m.png",
+        title: "Watermark Mobile Study Page",
+        width: "40vw",
+        dimension: "portrait",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/resource-m.png",
+        title: "Watermark Mobile Resources Page",
+        width: "40vw",
+        dimension: "portrait",
       },
     ],
     links: [
       {
-        link: "https://djones794.studio.mcad.edu/pftw-spring21/wk12/assignment/",
-        linkDescription: "Hums & Whistles",
+        link: "https://www.watermarkstudies.com/",
+        linkDescription: "Watermark Website",
       },
     ],
     description: [
-      "The intension behind this piece is an accessible and unique digital instrument. This instrument would have audial output and analogous visual expressions. I recorded some sounds and settled on a few of my wife’s hums and whistles.",
-      "I then used the P5 library to load sounds and connected their levels to expanding rectangles. Colorful rectangles pop on top of the muted, gray background. By pressing the parallel keystrokes, the user can hear and see the results.",
-    ],
-  },
-  {
-    alias: "design-practice",
-    title: "my design practice",
-    subtitle: "motion graphic and video production",
-    date: "Fall 2021",
-    tag: ["video", "motion graphic"],
-    vid: "https://djones794.studio.mcad.edu/design-in-context/design-practice/video/DesignInContext_My-Design-Practice_Fall-2021.mp4",
-    imgDim: "rect",
-    vidPoster:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/me.png",
-    imgs: [
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/logo.gif",
-        title: "Design Practice — Logo",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/chemistry.gif",
-        title: "Design Practice — Chemistry",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/ship.gif",
-        title: "Design Practice — Ship",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/search.gif",
-        title: "Design Practice — Search",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/people-feedback.gif",
-        title: "Design Practice — Feedback",
-        width: "40vw",
-        dimension: "landscape",
-      },
-    ],
-    description: [
-      "This project addresses my design practice now and in the future. After a semester of focusing on design history and thought, I developed a script focused on conveying my conclusions and goals.",
-      "After finalizing the script, I recorded audio and video while designing motion graphics. I brought everything together and went through many rounds of peer reviews before landing on a cleaner final version.",
-    ],
-  },
-  {
-    alias: "shark-suppression",
-    title: "shark suppression",
-    subtitle: "satirical user experience that protests the existence of sharks",
-    date: "Summer 2021",
-    tag: ["branding", "ux/ui design", "dev/programmming"],
-    imgDim: "rect",
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_walkthrough.gif",
-    imgs: [
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_home.jpg",
-        title: "BDLSS - Home",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_boaters.jpg",
-        title: "BDLSS - Boaters",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_dolphins.jpg",
-        title: "BDLSS - Dolphins",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_sharks.jpg",
-        title: "BDLSS - Sharks",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_merch.jpg",
-        title: "BDLSS - Merchandise",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_walkthrough.gif",
-        title: "BDLSS — Walkthrough",
-        dimension: "landscape",
-      },
-    ],
-    links: [
-      {
-        link: "https://davyjonesdesign.github.io/shark-suppression/",
-        linkDescription: "Full Website",
-      },
-    ],
-    description: [
-      "For this project, I set out to create a user experience that critiques the way mainstream news networks frame information to conform to a singular narrow narrative. I decided to do this through the use of satire and created a mock website for a fake group of boaters and dolphins who were united in their negative views of sharks. My hopes were that the ridiculous characterizations and off-based reasoning of the boaters and dolphins would be familiar to users as similar tactics heard on mainstream news. After working through this project, I believe I will definitely continue to use creative code as a design tool for future projects and not just a developing tool. If I could do this project again, I think I would rely more on using p5 instead of Vue to set up the pages, buttons, and interaction. I think p5 would have allowed me to implement more organic imagery and interactions.",
+      "The Watermark Web App serves as an intuitive and engaging app to organize a large selection of bible studies. Input and research showed that Vue was the most viable framework for building this application. Deciding to target older generations, the focus shifted to enhancing accessibility and legibility based on user research. UI design patterns based on this research were developed to reflect a scholarly and calm aesthetic.",
+      "I deployed the app with GitHub pages and shared it with friends and family. As I continue working on this on-going project, I plan to integrate this and future feedback in new versions.",
     ],
   },
   {
@@ -229,6 +136,147 @@ const data = [
     ],
   },
   {
+    alias: "shark-suppression",
+    title: "shark suppression",
+    subtitle: "satirical user experience that protests the existence of sharks",
+    date: "Summer 2021",
+    tag: ["branding", "ux/ui design", "dev/programmming"],
+    imgDim: "rect",
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_walkthrough.gif",
+    imgs: [
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_home.jpg",
+        title: "BDLSS - Home",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_boaters.jpg",
+        title: "BDLSS - Boaters",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_dolphins.jpg",
+        title: "BDLSS - Dolphins",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_sharks.jpg",
+        title: "BDLSS - Sharks",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_merch.jpg",
+        title: "BDLSS - Merchandise",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/shark-suppression/shark-suppression_walkthrough.gif",
+        title: "BDLSS — Walkthrough",
+        dimension: "landscape",
+      },
+    ],
+    links: [
+      {
+        link: "https://davyjonesdesign.github.io/shark-suppression/",
+        linkDescription: "Full Website",
+      },
+    ],
+    description: [
+      "For this project, I set out to create a user experience that critiques the way mainstream news networks frame information to conform to a singular narrow narrative. I decided to do this through the use of satire and created a mock website for a fake group of boaters and dolphins who were united in their negative views of sharks. My hopes were that the ridiculous characterizations and off-based reasoning of the boaters and dolphins would be familiar to users as similar tactics heard on mainstream news. After working through this project, I believe I will definitely continue to use creative code as a design tool for future projects and not just a developing tool. If I could do this project again, I think I would rely more on using p5 instead of Vue to set up the pages, buttons, and interaction. I think p5 would have allowed me to implement more organic imagery and interactions.",
+    ],
+  },
+  {
+    alias: "hums-whistles",
+    title: "hums & whistles",
+    subtitle: "digital instrument",
+    date: "Spring 2021",
+    tag: ["dev/programming"],
+    imgDim: "rect",
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
+    imgs: [
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
+        title: "Hums & Whistles",
+        width: "40vw",
+        dimension: "landscape",
+      },
+    ],
+    links: [
+      {
+        link: "https://djones794.studio.mcad.edu/pftw-spring21/wk12/assignment/",
+        linkDescription: "Hums & Whistles",
+      },
+    ],
+    description: [
+      "The intension behind this piece is an accessible and unique digital instrument. This instrument would have audial output and analogous visual expressions. I recorded some sounds and settled on a few of my wife’s hums and whistles.",
+      "I then used the P5 library to load sounds and connected their levels to expanding rectangles. Colorful rectangles pop on top of the muted, gray background. By pressing the parallel keystrokes, the user can hear and see the results.",
+    ],
+  },
+  {
+    alias: "forward",
+    title: "forward",
+    subtitle: "full brand and web design for industrial marketing firm",
+    date: "Spring 2020",
+    tag: ["branding", "ux/ui design"],
+    imgDim: "rect",
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home_thumb.jpg",
+    imgs: [
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home.jpg",
+        title: "Forward — Home Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-about.jpg",
+        title: "Forward — Contact Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-blog.jpg",
+        title: "Forward — Blog Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-blog-single.jpg",
+        title: "Forward — Blog Single Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+    ],
+    description: [
+      "While working for a industrial manufacturer, I was given an opportunity to create a brand and website design for our small creative agency. With industrial companies in mind, my team and I worked together to develop a brand and website that would succeed at gaining traction in this market. After countless reviews of my proposed logos and layouts, we finalized our name, logo and website design.",
+    ],
+  },
+  {
+    alias: "central-wire-industries",
+    title: "central wire industries",
+    subtitle: "branding and web design",
+    date: "Summer 2020",
+    tag: ["branding", "ux/ui design"],
+    imgDim: "rect",
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web-mockups.jpg",
+    imgs: [
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web-mockups.jpg",
+        title: "CWI Web Mockups",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web.jpg",
+        title: "CWI Home Page",
+        width: "40vw",
+        dimension: "landscape",
+      },
+    ],
+    description: [
+      "With the marketing team at Central Wire Industries, I designed a bold and industrial focused brand and website.",
+    ],
+  },
+  {
     alias: "stem",
     title: "stem research group",
     subtitle: "logo and branding",
@@ -279,63 +327,7 @@ const data = [
       "I polished the ideas up using Illustrator and presented them to the team. We agreed on one that met the desired results the team was looking for. I then developed a more robust brand by providing social media graphics and mockups of this logo in use. Though they did not pursue a full style guide, I provided them a basic logo guide along with assets.",
     ],
   },
-  {
-    alias: "watermark",
-    title: "watermark web app",
-    subtitle: "branding, web design & programming",
-    date: "Spring 2021",
-    tag: ["branding", "ux/ui design", "dev/programming", "vue"],
-    imgDim: "rect",
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/home.jpg",
-    imgs: [
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/home.jpg",
-        title: "Watermark Home Page",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/study.jpg",
-        title: "Watermark Study Page",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/resources.jpg",
-        title: "Watermark Resources Page",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/home-m.png",
-        title: "Watermark Mobile Home Page",
-        width: "40vw",
-        dimension: "portrait",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/study-m.png",
-        title: "Watermark Mobile Study Page",
-        width: "40vw",
-        dimension: "portrait",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/watermark/resource-m.png",
-        title: "Watermark Mobile Resources Page",
-        width: "40vw",
-        dimension: "portrait",
-      },
-    ],
-    links: [
-      {
-        link: "https://www.watermarkstudies.com/",
-        linkDescription: "Watermark Website",
-      },
-    ],
-    description: [
-      "The Watermark Web App serves as an intuitive and engaging app to organize a large selection of bible studies. Input and research showed that Vue was the most viable framework for building this application. Deciding to target older generations, the focus shifted to enhancing accessibility and legibility based on user research. UI design patterns based on this research were developed to reflect a scholarly and calm aesthetic.",
-      "I deployed the app with GitHub pages and shared it with friends and family. As I continue working on this on-going project, I plan to integrate this and future feedback in new versions.",
-    ],
-  },
+  
   {
     alias: "drifting",
     title: "drifting",
@@ -459,32 +451,6 @@ const data = [
     ],
   },
   {
-    alias: "central-wire-industries",
-    title: "central wire industries",
-    subtitle: "branding and web design",
-    date: "Summer 2020",
-    tag: ["branding", "ux/ui design"],
-    imgDim: "rect",
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web-mockups.jpg",
-    imgs: [
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web-mockups.jpg",
-        title: "CWI Web Mockups",
-        width: "40vw",
-        dimension: "landscape",
-      },
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web.jpg",
-        title: "CWI Home Page",
-        width: "40vw",
-        dimension: "landscape",
-      },
-    ],
-    description: [
-      "With the marketing team at Central Wire Industries, I designed a bold and industrial focused brand and website.",
-    ],
-  },
-  {
     alias: "church-booklet",
     title: "church booklet",
     subtitle: "branding and web design",
@@ -505,43 +471,78 @@ const data = [
     ],
   },
   {
-    alias: "forward",
-    title: "forward",
-    subtitle: "full brand and web design for industrial marketing firm",
-    date: "Spring 2020",
-    tag: ["branding", "ux/ui design"],
-    imgDim: "rect",
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home_thumb.jpg",
+    alias: "breakfast",
+    title: "breakfast",
+    subtitle: "digital illustration",
+    date: "Spring 2022",
+    tag: ["digital illustration", "typography"],
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-square.png",
+    imgDim: "square",
     imgs: [
       {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home.jpg",
-        title: "Forward — Home Page",
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-mural-mockup.jpg",
+        title: "Breakfast Mural Mockup",
         width: "40vw",
         dimension: "landscape",
       },
       {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-about.jpg",
-        title: "Forward — Contact Page",
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/breakfast/breakfast-square.png",
+        title: "Breakfast",
+        width: "40vw",
+        dimension: "square",
+      },
+    ],
+    description: [
+      "A recent assignment from the Typography course was to select a word and depict it on a mural wall in a way that emphasizes its meaning. I selected “breakfast” and replaced each letter with a hand-drawn breakfast item. I wanted it to feel fun, playful, and filling — as if you are being treated to a big breakfast buffet!",
+    ],
+  },
+  {
+    alias: "design-practice",
+    title: "my design practice",
+    subtitle: "motion graphic and video production",
+    date: "Fall 2021",
+    tag: ["video", "motion graphic"],
+    vid: "https://djones794.studio.mcad.edu/design-in-context/design-practice/video/DesignInContext_My-Design-Practice_Fall-2021.mp4",
+    imgDim: "rect",
+    vidPoster:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/me.png",
+    imgs: [
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/logo.gif",
+        title: "Design Practice — Logo",
         width: "40vw",
         dimension: "landscape",
       },
       {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-blog.jpg",
-        title: "Forward — Blog Page",
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/chemistry.gif",
+        title: "Design Practice — Chemistry",
         width: "40vw",
         dimension: "landscape",
       },
       {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-blog-single.jpg",
-        title: "Forward — Blog Single Page",
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/ship.gif",
+        title: "Design Practice — Ship",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/search.gif",
+        title: "Design Practice — Search",
+        width: "40vw",
+        dimension: "landscape",
+      },
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/design-practice/people-feedback.gif",
+        title: "Design Practice — Feedback",
         width: "40vw",
         dimension: "landscape",
       },
     ],
     description: [
-      "While working for a industrial manufacturer, I was given an opportunity to create a brand and website design for our small creative agency. With industrial companies in mind, my team and I worked together to develop a brand and website that would succeed at gaining traction in this market. After countless reviews of my proposed logos and layouts, we finalized our name, logo and website design.",
+      "This project addresses my design practice now and in the future. After a semester of focusing on design history and thought, I developed a script focused on conveying my conclusions and goals.",
+      "After finalizing the script, I recorded audio and video while designing motion graphics. I brought everything together and went through many rounds of peer reviews before landing on a cleaner final version.",
     ],
-  },
+  }
 ];
 
 export default data;

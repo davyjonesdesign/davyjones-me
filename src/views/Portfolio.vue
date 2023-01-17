@@ -221,7 +221,7 @@ export default {
 } */
 
 .myWork-wrapper {
-  margin: 0 20px 0 130px;
+  margin: 0 20px 0 100px;
   padding: 0px 10px 20px;
   display: flex;
   flex-direction: column;
@@ -256,7 +256,6 @@ export default {
     padding: 0 20px;
     margin: 0;
   }
-  
 }
 .port-header {
   position: relative;

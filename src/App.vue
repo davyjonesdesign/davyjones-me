@@ -70,21 +70,22 @@ export default {
   -webkit-font-smoothing: antialiased;
 }
 :root {
-  --text: #000000;
-  --btn-text: #fff;
+  --text: #1d1d1d;
+  --btn-text: #e9e9e9;
   --heavy: #1263ae;
-  --heavy-op: #00519d;
-  --light: #dee5fe;
+  --heavy-op: #00488a;
+  --light: #e2e8ff;
+  --light-op: #bac3e7;
   --backdrop: #fffaffbd;
   --menuBack: #ffffffb2;
   --off: #b8d9ff;
-  --outline: #a4a4a4;
+  --outline: #a9b1c4;
+  --outline-light: #e2e7f1;
   --nav-back: var(--heavy);
-  --error-light: rgb(255, 218, 218);
-  --error-dark: rgb(201, 23, 23);
-  --nav-item: var(--light);
-  --toggle-light: var(--light);
-  --toggle-dark: var(--heavy);
+  --error-light: #ffdada;
+  --error-dark: #c91717;
+  --nav-item_shadow: var(--heavy);
+  --nav-item_outline: var(--text);
   --logo: var(--heavy);
   --logo-reverse: var(--btn-text);
   --shadow: 0px 0px 10px 0 var(--heavy-op);
@@ -92,21 +93,23 @@ export default {
   --border-radius: 0.75rem;
 }
 :root.dark-theme {
-  --text: #ffffff;
-  --btn-text: #fff;
+  --text: #e9e9e9;
+  --btn-text: #e9e9e9;
   --heavy: #5e9cff;
   --heavy-op: #9fc4fc;
   --menuBack: #00000080;
   --light: #1c2755;
+  --light-op: #26346d;
   --backdrop: #1f1d1fbf;
-  --off: #141c3c;
-  --outline: #686868;
-  --error-light: rgb(84, 0, 0);
-  --error-dark: rgb(255, 161, 161);
+  --off: #1d1d1d;
+  --outline: #454b59;
+  --outline-light: #141b25;
+  --error-light: #540000;
+  --error-dark: #ffa1a1;
   --nav-back: var(--light);
   --nav-item: var(--heavy);
-  --toggle-light: var(--heavy);
-  --toggle-dark: var(--text);
+  --nav-item_shadow: var(--heavy);
+  --nav-item_outline: var(--text);
   --logo: var(--text);
   --logo-reverse: var(--heavy);
   --shadow: 0px 0px 10px 0 var(--heavy-op);
@@ -174,6 +177,7 @@ h5,
 h6,
 p,
 ul,
+ol,
 li {
   color: var(--text);
   letter-spacing: 0;
@@ -182,30 +186,53 @@ li {
 p,
 table,
 ul,
+ol,
 li {
   font-family: "Lato", sans-serif;
+  color: var(--text)
 }
 h1 {
   font-weight: 800;
   font-size: 2rem;
   margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 h2 {
   font-weight: 500;
   font-size: 1.75rem;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+
 }
 h3 {
   font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 h4 {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.15;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--heavy);
 }
 h5 {
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
+  margin-bottom: 10px;
+
+}
+h6 {
+  font-size: 0.75rem;
+  font-weight: 200;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+
 }
 p {
   margin: 0 0 15px;
@@ -213,6 +240,7 @@ p {
   font-size: 1rem;
   line-height: 22px;
   color: var(--text);
+  max-width: 600px;
 }
 a {
   border: none;
@@ -226,7 +254,7 @@ label,
 textarea {
   font-family: "Lato", sans-serif;
 }
-ul {
+ul, ol {
   padding: 5px 0 10px 20px;
   font-weight: 300;
   /* line-height: 1.5rem; */
@@ -285,7 +313,20 @@ li {
   }
 }
 .carousel button {
-  background: var(--heavy);
+  background: var(--light);
+  border: 2px solid var(--heavy);
+  transition: var(--transition-faster);
+}
+.carousel button svg {
+  fill:var(--text)
+}
+.carousel button:hover {
+  background: var(--off);
+  scale: 1.25;
+}
+.carousel__next:hover {
+  background: var(--off);
+  transform: translate(16px, -16px);
 }
 
 ul.sidebar-panel-nav {
@@ -302,7 +343,7 @@ ul.sidebar-panel-nav > li > a {
 
 .splash-btn {
   min-width: 300px;
-  background: var(--heavy);
+  background: var(--light);
   color: var(--light);
   border: 2px solid var(--heavy);
   margin: 20px 0 0;
@@ -310,17 +351,20 @@ ul.sidebar-panel-nav > li > a {
 }
 
 .splash-btn .nav-link_text {
-  font-weight: 600;
+  font-weight: 800;
   height: 100%;
+  color: var(--text);
+  /* font-weight: 800; */
   opacity: 1;
 }
 .splash-btn:hover {
   background: var(--off);
   color: var(--heavy);
-  border: 2px solid var(--heavy);
+  border: 2px solid var(--text);
 }
 .splash-btn:hover .nav-link_text {
   height: 100%;
+  font-weight: 800;
   color: var(--text);
 }
 
@@ -347,8 +391,16 @@ ul.sidebar-panel-nav > li > a {
     margin: 10px;
     height: auto;
     z-index: 100;
-    background: var(--logo-reverse);
+    background: var(--light);
     border-radius: 5px;
+    border: 2px solid var(--heavy);
+    transition: var(--transition);
+  }
+  #burger:hover {
+    border-color: var(--text);
+    transform: translate(3px, -3px);
+    background: var(--off);
+    box-shadow: -3px 3px 0 var(--nav-item_shadow);
   }
 
   h1,
@@ -400,6 +452,5 @@ ul.sidebar-panel-nav > li > a {
   .name-field .field {
     width: 100%;
   }
-  
 }
 </style>

@@ -1,28 +1,38 @@
 /* multiselect */
 .multiselect {
-    border: 1px solid var(--heavy);
+    border: 2px solid var(--heavy);
     background: var(--light);
     /* border-radius: var(--border-radius); */
+    z-index: 1000000000; 
+    transition: var(--transition-faster);
+}
+.multiselect:hover {
+    background-color: var(--off);
+    transform: translate(3px, -3px);
+    box-shadow: -3px 3px var(--heavy) ;
+    border-color: var(--text);
 }
 .multiselect-placeholder {
-    color: var(--heavy-op);
+    color: var(--text);
+    font-weight: 600;
 }
 .multiselect-caret {
     background: var(--heavy-op);
 }
 .multiselect.is-active {
-    box-shadow: var(--shadow);
 }
 .multiselect-dropdown {
-    border: 1px solid var(--heavy);
+    border: 2px solid var(--text);
+    box-shadow: -3px 3px var(--heavy);
     /* border-radius: 0 0 var(--border-radius) var(--border-radius); */
     background: var(--light);
     /* overflow: hidden; */
     /* min-height: 310px; */
 }
 .multiselect-options {
-    font-weight: 500;
+    font-weight: 600;
     text-transform: lowercase;
+    letter-spacing: 1px;
     /* width: 100vw; */
     letter-spacing: 1px;
 }

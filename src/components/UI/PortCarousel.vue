@@ -91,13 +91,14 @@ export default {
 .portCard_tagSpan {
   background: var(--off);
   /* border: 1px solid var(--off); */
-  color: var(--text);
-  padding: 0px 7px 1px;
+  color: var(--heavy);
+  padding: 0px 10px 1px;
   margin: 0 5px 5px 0;
   font-weight: 400;
-  font-size: 12px;
-  border-radius: var(--border-radius);
+  font-size: 14px;
+  border-radius: 5px;
   text-transform: lowercase;
+  letter-spacing: 1px;
 }
 @media (max-height: 450px) {
   .portCard_tags {

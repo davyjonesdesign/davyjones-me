@@ -46,6 +46,10 @@
     </div>
 
     <theme-button class="theme-desktop" />
+    <!-- 
+      planning to add a menu toggle 
+      <button>Hey</button> 
+    -->
   </div>
 </template>
 <script>

@@ -17,7 +17,11 @@
             program.</span
           >
         </td>
-        <td class="tooltip" @click="sketchClick()" :class="{ clicked: sketchHid }">
+        <td
+          class="tooltip"
+          @click="sketchClick()"
+          :class="{ clicked: sketchHid }"
+        >
           Sketch<span class="tooltiptext" :class="{ visible: sketchHid }"
             >Sketch is a vector graphics editor for user interface and user
             experience design of websites and mobile apps.</span
@@ -159,7 +163,11 @@
       </tr>
       <tr>
         <th>web design</th>
-        <td class="tooltip" @click="sketchClick()" :class="{ clicked: sketchHid }">
+        <td
+          class="tooltip"
+          @click="sketchClick()"
+          :class="{ clicked: sketchHid }"
+        >
           Sketch<span class="tooltiptext" :class="{ visible: sketchHid }"
             >Sketch is a vector graphics editor for user interface and user
             experience design of websites and mobile apps.</span
@@ -196,7 +204,9 @@
       <tr>
         <th>web development</th>
         <td class="tooltip" @click="htmlClick()" :class="{ clicked: htmlHid }">
-          HTML<span class="tooltiptext left higher" :class="{ visible: htmlHid }"
+          HTML<span
+            class="tooltiptext left higher"
+            :class="{ visible: htmlHid }"
             >The HyperText Markup Language or HTML is the standard markup
             language for documents designed to be displayed in a web
             browser.</span
@@ -213,7 +223,9 @@
       <tr>
         <th></th>
         <td class="tooltip" @click="jsClick()" :class="{ clicked: jsHid }">
-          Javascript<span class="tooltiptext left higher" :class="{ visible: jsHid }"
+          Javascript<span
+            class="tooltiptext left higher"
+            :class="{ visible: jsHid }"
             >JavaScript, often abbreviated JS, is a programming language that is
             one of the core technologies of the World Wide Web, alongside HTML
             and CSS.
@@ -676,10 +688,10 @@ td:active {
   .tooltip .right {
     width: 200%;
     left: calc(-200% - 5px);
-    top: -150%
+    top: -150%;
   }
   .tooltip .higher {
-    top: -500%
+    top: -500%;
   }
   td {
     padding: 5px;

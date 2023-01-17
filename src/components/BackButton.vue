@@ -38,26 +38,27 @@ export default {
   font-size: 1rem;
 }
 .back-link svg {
-  fill: var(--btn-text);
+  fill: var(--text);
   transform: rotate(-90deg);
   width: 36px;
   padding: 5px 7px;
   margin-right: 5px;
   border-radius: 100%;
+  transition: var(--transition-fastest);
   border: 2px solid var(--heavy);
-  background: var(--heavy);
+  background: var(--light);
 }
 .back-link:hover svg {
-  background: var(--light);
-  /* transform: scale(1.25); */
-  /* transform: rotate(-90deg); */
+  background: var(--off);
+  transform: translate(-6px, 0) rotate(-90deg) scale(1.05);
   fill: var(--text);
-  transition: var(--transition-fastest);
   cursor: pointer;
+  box-shadow: 0 4px 0 var(--nav-item_shadow);
 }
 .back-link:hover {
   /* transform: scale(1.05); */
   transition: var(--transition-fastest);
   cursor: pointer;
+  text-decoration: underline;
 }
 </style>

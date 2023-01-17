@@ -328,7 +328,7 @@ export default {
   transform: scale(1.1);
 }
 .port-wrapper {
-  margin: 0 0 0 120px;
+  margin: 0 0 0 80px;
   /* width: 100vw; */
   background: var(--light);
   /* min-height: 80vh; */
@@ -439,10 +439,10 @@ export default {
   padding: 10px 12px;
   margin: 0 5px 5px 0;
   width: auto;
-  background: var(--heavy);
+  background: var(--light);
   align-items: center;
   justify-content: center;
-  color: var(--light);
+  color: var(--text);
   border: 2px solid var(--heavy);
   border-radius: 5px;
   font-size: 14px;
@@ -450,12 +450,16 @@ export default {
   /* text-transform: uppercase; */
   /* letter-spacing: 1px; */
   /* font-weight: 700; */
+  transition: var(--transition-faster);
 }
 
 .web-project_link:hover {
-  background: var(--light);
-  border-color: var(--heavy);
+  background: var(--off);
+  border-color: var(--text);
   color: var(--text);
+  transform: translate(3px, -3px);
+  box-shadow: -3px 3px 0 var(--nav-item_shadow);
+
 }
 .port_descr {
   /* display: flex; */

@@ -25,7 +25,7 @@ button:focus {
 }
 
 .burger-bar {
-    background-color: var(--logo);
+    background-color: var(--text);
     position: absolute;
     top: 50%;
     right: 0px;
@@ -89,4 +89,34 @@ button:focus {
 }
 .mobile-menu {
     display: none;
+}
+
+/* ds extra */
+#burgerCopy {
+    /* display: none; */
+    height: 100%;
+}
+#burgerCopy.active {
+    border: 2px solid var(--heavy);
+    background: var(--off);
+}
+
+#burgerCopy.active .burger-button {
+    transform: rotate(-180deg);
+}
+
+#burgerCopy.active .burger-bar {
+    background-color: var(--text);
+}
+
+#burgerCopy.active .burger-bar--1 {
+    transform: rotate(45deg)
+}
+
+#burgerCopy.active .burger-bar--2 {
+    opacity: 0;
+}
+
+#burgerCopy.active .burger-bar--3 {
+    transform: rotate(-45deg)
 }

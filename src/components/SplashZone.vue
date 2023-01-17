@@ -2,18 +2,26 @@
   <div class="splash-content">
     <div class="home-text">
       <h2>
-        <span class="char-hover">H</span><span class="char-hover">i</span
-        >, <span class="char-hover">I</span><span class="char-hover">'</span
+        <span class="char-hover">H</span><span class="char-hover">i</span>,
+        <span class="char-hover">I</span><span class="char-hover">'</span
         ><span class="char-hover">m</span> <span class="char-hover">D</span
         ><span class="char-hover">a</span><span class="char-hover">v</span
         ><span class="char-hover">y</span> <span class="char-hover">J</span
         ><span class="char-hover">o</span><span class="char-hover">n</span
         ><span class="char-hover">e</span><span class="char-hover">s</span>
       </h2>
-      <h3>I am a graphic and web designer with some web development experience.</h3>
-      <router-link class="link link-btn splash-btn" to="/contact">
-        <div class="nav-link_text">Connect with me!</div>
-      </router-link>
+      <h3>
+        I am a graphic and web designer with experience executing complex user
+        interfaces.
+      </h3>
+      <div class="splash-btns">
+        <router-link class="link link-btn splash-btn" to="/portfolio">
+          <div class="nav-link_text">Check our my work!</div>
+        </router-link>
+        <router-link class="link link-btn splash-btn" to="/contact">
+          <div class="nav-link_text">Connect with me!</div>
+        </router-link>
+      </div>
     </div>
     <button class="scrollTop bounce" @click="scrollToElement('#work')">
       <svg
@@ -47,7 +55,7 @@ export default {
           inline: "nearest",
         });
     },
-  }
+  },
 };
 </script>
 
@@ -57,7 +65,7 @@ export default {
 
 .home-text {
   text-align: left;
-  margin: 0 40px 0 160px;
+  margin: 0 40px 0 140px;
   line-height: 1;
   max-width: 960px;
   height: 100vh;
@@ -78,9 +86,9 @@ export default {
 }
 .home-text h3 {
   font-size: 2.5rem;
-  line-height: 2.5rem;
+  line-height: 3.5rem;
   letter-spacing: 1px;
-  margin: 20px 0 10px;
+  margin: 20px 0 40px;
   font-weight: 600;
   text-transform: none;
 }
@@ -96,13 +104,14 @@ export default {
   transform: skew(-15deg);
   cursor: pointer;
 }
-.scrollTop {
+button.scrollTop.bounce {
   margin: 0px 0 0px;
-  color: var(--heavy);
+  color: var(--text);
   transition: var(--transition-faster);
-  background: none;
-  border: none;
+  background: var(--light);
+  border: 2px solid var(--heavy);
   outline: inherit;
+  border-radius: 5px;
   font-weight: 600;
   font-size: 1rem;
   position: relative;
@@ -110,18 +119,21 @@ export default {
   bottom: 70px;
   left: calc(50% + 20px);
 }
-.scrollTop:hover {
+button.scrollTop.bounce:hover {
   cursor: pointer;
+  border: 2px solid var(--text);
+  background: var(--off);
+  box-shadow: -3px -5px var(--heavy);
 }
 .scrollTop svg {
   transition: var(--transition-faster);
 
-  fill: var(--heavy);
+  fill: var(--text);
   cursor: pointer;
   transform: rotate(-180deg);
   width: 60px;
-  border-radius: var(--border-radius);
-  padding: 20px 10px;
+  /* border-radius: var(--border-radius); */
+  padding: 14px 12px 20px;
   /* margin-right: 5px; */
   /* border-radius: var(--border-radius); */
   /* background: var(--heavy); */
@@ -131,7 +143,8 @@ export default {
   /* background: var(--light); */
   fill: var(--text);
   cursor: pointer;
-  background: var(--menuBack);
+  background: var(--off);
+  border: var(--text);
 }
 .bounce {
   -moz-animation: bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
@@ -148,7 +161,11 @@ export default {
     transform: translate3d(0, 8px, 0);
   }
 }
-
+.splash-btns {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  
+}
 @media (max-width: 960px) {
   .home-text {
     margin: 0 60px 0 35px;
@@ -158,12 +175,11 @@ export default {
   }
   .home-text h3 {
     font-size: 1.5rem;
-    margin: 15px 0;
-    line-height: 1.5rem;
+    margin: 15px 0 30px;
+    line-height: 2rem;
   }
-  .scrollTop {
+  button.scrollTop.bounce {
     left: calc(50% - 30px);
-
   }
   th {
     font-size: 0.7rem;
@@ -175,7 +191,7 @@ export default {
 }
 @media (max-width: 640px) {
   .home-text {
-    margin: 0 20px 0 20px;
+    margin: 0 20px 40px;
   }
 }
 @media (max-width: 400px) {
@@ -184,8 +200,8 @@ export default {
   }
   .home-text h3 {
     font-size: 1.25rem;
-    line-height: 1.75rem;
-    margin: 10px 0;
+    line-height: 2rem;
+    margin: 10px 0 30px;
   }
   thead th {
     font-size: 18px;

@@ -20,22 +20,26 @@
         I've worked on many projects from branding, print, UX/UI Design, web
         development, motion graphics, video, and more.
       </p>
-      
+
       <PortCarousel />
       <router-link class="link link-btn splash-btn" to="/portfolio">
         <div class="nav-link_text">See my work</div>
       </router-link>
     </div>
     <div class="about-home" id="about">
-       <intersection-observer
+      <intersection-observer
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement2"
       ></intersection-observer>
       <h1>About me</h1>
-      
+
       <div class="about-dets">
         <div class="about-dets_content">
-          <p>I've been in the graphic and web design world for 6 years and have filled many roles while operating a design practice and working on a Masters Program.</p>
+          <p>
+            I've been in the graphic and web design world for 6 years and have
+            filled many roles while operating a design practice and working on a
+            Masters Program.
+          </p>
         </div>
         <ToolBox />
       </div>
@@ -44,37 +48,21 @@
       </router-link>
     </div>
     <div class="footer">
-      <Foot id="foot"/>
+      <Foot id="foot" />
       <intersection-observer
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement3"
       ></intersection-observer>
       <div class="bot-sp"></div>
     </div>
-    
-    <div class="scrollers">
-      <router-link
-        to="#splash"
-        :class="{ active: isActive }"
-      >
-      </router-link>
-      <router-link
-        to="#work"
-        :class="{ active: isActive1 }"
-      >
-      </router-link>
-      <router-link
-        to="#about"
-        :class="{ active: isActive2 }"
-      >
-      </router-link>
-      <router-link
-        to="#foot"
-        :class="{ active: isActive3 }"
-      >
-      </router-link>
-    </div>
-    <div class="scrollers-b">
+
+    <!-- <div class="scrollers">
+      <router-link to="#splash" :class="{ active: isActive }"> </router-link>
+      <router-link to="#work" :class="{ active: isActive1 }"> </router-link>
+      <router-link to="#about" :class="{ active: isActive2 }"> </router-link>
+      <router-link to="#foot" :class="{ active: isActive3 }"> </router-link>
+    </div> -->
+    <!-- <div class="scrollers-b">
       <router-link
         to="#splash"
         :class="{ active: isActive }"
@@ -111,7 +99,7 @@
         "
       >
       </router-link>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -206,7 +194,6 @@ export default {
 <style>
 #foot {
   height: 99vh;
-
 }
 .bot-sp {
   height: 1vh;
@@ -224,7 +211,7 @@ export default {
   scrollbar-width: none; /* Firefox */
 }
 .port-container_home {
-  margin: 0px 40px 0 160px;
+  margin: 0px 40px 0 120px;
   /* padding: 60px 0 0 ; */
   height: 100vh;
   scroll-snap-align: center;
@@ -233,7 +220,7 @@ export default {
   justify-content: center;
 }
 .about-home {
-  margin: 0px 40px 0 160px;
+  margin: 0px 40px 0 120px;
   scroll-snap-align: center;
   height: 100vh;
   display: flex;
@@ -252,7 +239,6 @@ export default {
   display: flex;
   flex-direction: column;
   z-index: 130;
-  
 }
 .scrollers-b {
   display: none;
@@ -289,7 +275,7 @@ export default {
   .scrollers a {
     /* display: none; */
     /* left: 1px; */
-    margin: 5px 5px
+    margin: 5px 5px;
   }
   .about-dets {
     flex-direction: column;
@@ -309,7 +295,6 @@ export default {
   }
 }
 @media (max-height: 450px) {
-  
   .about-dets {
     flex-direction: row;
   }

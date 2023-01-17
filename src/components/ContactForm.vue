@@ -261,11 +261,13 @@ textarea::placeholder {
   }
 }
 @media (max-height: 450px) {
-  
-  input[type="submit"], input[type="text"], input[type="email"], textarea, select  {
+  input[type="submit"],
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
     padding: 10px;
     font-size: 16px;
   }
-  
 }
 </style>

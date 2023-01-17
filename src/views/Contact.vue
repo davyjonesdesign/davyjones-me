@@ -41,7 +41,7 @@ export default {
 .content-wrapper {
   -ms-overflow-style: none;
   scrollbar-width: none;
-  margin: 0 20px 0 130px;
+  margin: 0 20px 0 100px;
   padding: 20px 0;
   height: 100vh;
   display: flex;
@@ -61,7 +61,6 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
 @media (max-width: 960px) {
   .content-wrapper {

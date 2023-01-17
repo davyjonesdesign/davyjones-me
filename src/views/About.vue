@@ -119,7 +119,7 @@ export default {
     onIntersectionElement(value) {
       this.isActive = !this.isActive;
       this.isIntersectingElement = value;
-    }
+    },
   },
 };
 </script>
@@ -140,7 +140,7 @@ export default {
   border-radius: 8px;
 }
 .about-content {
-  margin: 0px 40px 20px 140px;
+  margin: 0px 40px 20px 120px;
 }
 .form-container {
   /* width: 100%; */
@@ -209,7 +209,6 @@ export default {
     margin: 20px;
     width: 100%;
     padding-top: 0;
-
   }
   .form-container {
     margin: 0px 0px 20px;
@@ -252,7 +251,11 @@ export default {
     height: 40vh;
   }
   .image-overlay {
-    background-image: linear-gradient(180deg,rgba(0,0,0,.575), transparent);
+    background-image: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.575),
+      transparent
+    );
     width: 100vw;
     height: 104px;
     position: fixed;

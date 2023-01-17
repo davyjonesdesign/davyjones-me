@@ -1,7 +1,7 @@
 <template>
   <div class="foot-wrapper">
     <div class="foot-top">
-      <button class="scrollTop bounce" @click="scrollToElement('#top');">
+      <button class="scrollTop bounce" @click="scrollToElement('#top')">
         <svg
           id="a"
           xmlns="http://www.w3.org/2000/svg"
@@ -12,8 +12,6 @@
           />
         </svg>
       </button>
-
-      
     </div>
     <div class="footer-splash">
       <img
@@ -31,6 +29,18 @@
           <div class="nav-link_text">Connect with me!</div>
         </router-link>
       </div>
+    </div>
+    <div class="design-system">
+      <p>
+        Click on the text link to see the 
+        <router-link
+              @click="scrollToTop()"
+              to="/design-system"
+              class="footer-link inline-link"
+              >Full Design System</router-link
+            >
+        developed for this website.
+      </p>
     </div>
     <div>
       <Social />
@@ -109,7 +119,7 @@ export default {
 }
 .foot-copy {
   color: var(--outline);
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-align: center;
   padding: 10px 0px;
   margin: 0;
@@ -149,28 +159,31 @@ export default {
   color: var(--text);
   text-decoration: underline;
 }
-.scrollTop {
+button.scrollTop.bounce {
   margin: 0px 0 0px;
   color: var(--heavy);
   transition: var(--transition-faster);
-  background: none;
-  border: none;
+  border: 2px solid var(--heavy);
+  background: var(--light);
+  border-radius: 5px;
   outline: inherit;
   font-weight: 600;
   font-size: 1rem;
 }
-.scrollTop:hover {
+button.scrollTop.bounce:hover {
   cursor: pointer;
+  border: 2px solid var(--text);
+  box-shadow: -3px 5px var(--heavy);
 }
 .scrollTop svg {
   transition: var(--transition-faster);
 
-  fill: var(--heavy);
+  fill: var(--text);
   cursor: pointer;
   /* transform: rotate(-90deg); */
   width: 60px;
-  border-radius: var(--border-radius);
-  padding: 20px 10px;
+  /* border-radius: var(--border-radius); */
+  padding: 16px 10px 14px;
   /* margin-right: 5px; */
   /* border-radius: var(--border-radius); */
   /* background: var(--heavy); */
@@ -180,7 +193,7 @@ export default {
   /* background: var(--light); */
   fill: var(--text);
   cursor: pointer;
-  background: var(--menuBack);
+  background: var(--off);
 }
 .footer-splash {
   display: flex;
@@ -212,15 +225,15 @@ export default {
   margin: 10px 0 0;
 }
 .copy-small {
-    display: none;
+  display: none;
 }
 @media (max-width: 640px) {
-    .copy-small {
-        display: block;
-    }
-    .copy-big {
-        display: none;
-    }
+  .copy-small {
+    display: block;
+  }
+  .copy-big {
+    display: none;
+  }
   .footer-splash {
     flex-direction: column;
     justify-content: center;
@@ -269,6 +282,9 @@ export default {
   .footer-pic {
     max-width: 100px;
   }
-  
+}
+.inline-link {
+  padding: 0;
+  margin: 0 3px;
 }
 </style>

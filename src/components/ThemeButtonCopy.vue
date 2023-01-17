@@ -89,10 +89,8 @@ export default {
       const activeTheme = localStorage.getItem("user-theme");
       if (activeTheme === "light-theme") {
         this.setTheme("dark-theme");
-        this.userTheme("dark-theme")
       } else {
         this.setTheme("light-theme");
-        this.userTheme("light-theme")
 
       }
     },
@@ -104,7 +102,7 @@ export default {
     setTheme(theme) {
       localStorage.setItem("user-theme", theme);
       this.userTheme = theme;
-      document.documentElement.className = theme;
+      // document.documentElement.className = theme;
     },
 
     getMediaPreference() {

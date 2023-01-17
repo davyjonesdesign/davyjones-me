@@ -55,8 +55,8 @@ export default {
   background: var(--light);
 }
 .portCard:hover {
-  box-shadow: 3px 4px 0 var(--heavy);
-  transform: translate(-3px, -4px);
+  box-shadow: -3px 3px 0 var(--heavy);
+  transform: translate(3px, -3px);
   cursor: pointer;
 }
 .portCard_content {

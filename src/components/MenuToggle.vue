@@ -1,8 +1,8 @@
 <template>
-  <div class="theme-button">
-    <h6>light</h6>
+  <div class="menu-toggle">
+    <p>light/dark mode</p>
     <label class="switch-label">
-      <input @change="toggleTheme" type="checkbox" class="switch-checkbox" />
+      <input @change="toggleMenu" type="checkbox" class="switch-checkbox" />
       <svg
         class="light-icon"
         version="1.1"
@@ -66,8 +66,6 @@
         :class="{ 'switch-toggle-checked': userTheme === 'dark-theme' }"
       ></div>
     </label>
-    <h6>dark</h6>
-
   </div>
 </template>
 
@@ -85,15 +83,12 @@ export default {
   },
 
   methods: {
-    toggleTheme() {
+    toggleMenu() {
       const activeTheme = localStorage.getItem("user-theme");
       if (activeTheme === "light-theme") {
         this.setTheme("dark-theme");
-        this.userTheme("dark-theme")
       } else {
         this.setTheme("light-theme");
-        this.userTheme("light-theme")
-
       }
     },
 

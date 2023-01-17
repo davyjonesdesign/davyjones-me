@@ -70,10 +70,10 @@ const routes = [
       import(/* webpackChunkName: "about" */ "../views/NotFound.vue"),
   },
   {
-    path: "/carousel",
-    name: "Carousel",
+    path: "/design-system",
+    name: "DesignSystem",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Carousel.vue"),
+      import(/* webpackChunkName: "about" */ "../views/DesignSystem.vue"),
   },
 ];
 

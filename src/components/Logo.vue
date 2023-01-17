@@ -113,7 +113,7 @@
   padding: 0 10px;
 } */
 .logo:hover svg {
-  fill: var(--text);
+  fill: var(--heavy-op);
   /* width: 32px; */
   /* transform: scale(1.1); */
   transform: rotate(360deg);
