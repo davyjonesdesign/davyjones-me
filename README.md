@@ -36,3 +36,5 @@ https://davyjones.me/design-system
         })(window.location);
     </script>
 ```
+9. Push the build branch
+10. Go to 'Pages' in GitHub Settings and select the new branch in the dropdown under 'Branch' in 'Build and deployment'
