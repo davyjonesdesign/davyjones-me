@@ -459,17 +459,9 @@ export default {
   color: var(--text);
   transform: translate(3px, -3px);
   box-shadow: -3px 3px 0 var(--nav-item_shadow);
-
 }
 .port_descr {
-  /* display: flex; */
   width: 100%;
-  /* justify-content: space-between; */
-
-  /* margin: 20px 0; */
-}
-.port_descr p {
-  /* width: 45%; */
 }
 .gallery-wrapper {
   /* display: flex; */

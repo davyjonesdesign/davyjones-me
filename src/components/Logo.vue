@@ -92,33 +92,10 @@
   transition: var(--transition);
   padding: 20px 0px 10px;
 }
-/* .logo:hover .nav-logo_text h5 {
-  transition: var(--transition);
-  height: 100%;
-  opacity: 1;
-  color: var(--text);
-  font-size: 14px;
-} */
-.logo:hover .nav-logo_text h1 {
-  /* font-size: 32px; */
-  /* color: var(--text); */
-}
-/*  */
-/* .logo:hover {
-  padding: 0px 10px;
-  border-radius: 5px;
-} */
-/* .logo:hover .router-link-exact-active {
-  border-radius: 5px;
-  padding: 0 10px;
-} */
+
 .logo:hover svg {
   fill: var(--heavy-op);
-  /* width: 32px; */
-  /* transform: scale(1.1); */
   transform: rotate(360deg);
   transition: all 0.5s ease-in-out;
-  /* border-radius: var(--border-radius);
-  background: var(--light); */
 }
 </style>

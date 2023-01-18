@@ -164,7 +164,6 @@ button.scrollTop.bounce:hover {
 .splash-btns {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  
 }
 @media (max-width: 960px) {
   .home-text {

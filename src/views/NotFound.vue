@@ -8,8 +8,4 @@
     </router-link>
   </div>
 </template>
-<style>
-.NotFound {
-  /* font-size: 100px; */
-}
-</style>
+<style></style>

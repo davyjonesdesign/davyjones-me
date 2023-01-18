@@ -269,9 +269,6 @@ export default {
   margin-right: 20px;
 }
 @media (max-width: 960px) {
-  .scrollers {
-    /* left: 5px; */
-  }
   .scrollers a {
     /* display: none; */
     /* left: 1px; */

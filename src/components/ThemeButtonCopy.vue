@@ -67,7 +67,6 @@
       ></div>
     </label>
     <h6>dark</h6>
-
   </div>
 </template>
 
@@ -91,7 +90,6 @@ export default {
         this.setTheme("dark-theme");
       } else {
         this.setTheme("light-theme");
-
       }
     },
 

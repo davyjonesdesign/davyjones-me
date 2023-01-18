@@ -53,6 +53,13 @@ export default {
   max-width: 30vw;
 }
 
+.preload-animation p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1.1;
+  color: var(--heavy);
+}
+
 .LogoDark {
   display: none;
 }

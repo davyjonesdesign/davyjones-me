@@ -86,11 +86,6 @@
   background: var(--off);
   border-color: var(--heavy);
 }
-.link_focused, .router-link-exact-active svg {
-  /* fill: var(--text); */
-  /* width: 30px; */
-  /* transform: translate(0, 0); */
-}
 .link_focused,.router-link-exact-active .nav-link_text {
   height: 40%;
   opacity: 1;
