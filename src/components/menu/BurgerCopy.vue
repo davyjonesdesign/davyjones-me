@@ -16,14 +16,11 @@
       </slot>
     </div>
     <!-- sidebar -->
-    
   </div>
 </template>
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
   data: () => ({
     isBurgerActive: false,
   }),
@@ -31,8 +28,7 @@ export default {
     toggle() {
       this.isBurgerActive = !this.isBurgerActive;
     },
-    closeSidebarPanel() {
-    },
+    closeSidebarPanel() {},
   },
 };
 </script>

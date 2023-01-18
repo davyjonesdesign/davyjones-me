@@ -48,16 +48,18 @@ export default {
   justify-content: flex-start;
   transition: var(--transition-faster);
   margin: 10px;
-  border-radius: var(--border-radius);
-  width: 250px;
+  border-radius: 5px;
+  width: 300px;
   color: var(--text);
-  border-radius: var(--border-radius);
+  border: 2px solid var(--heavy);
   background: var(--light);
 }
 .portCard:hover {
   box-shadow: -3px 3px 0 var(--heavy);
   transform: translate(3px, -3px);
+  border-color: var(--text);
   cursor: pointer;
+  background: var(--off);
 }
 .portCard_content {
   color: var(--heavy);
@@ -77,16 +79,16 @@ export default {
 }
 .portCard_top img {
   width: 100%;
-  height: 30vh;
+  height: 40vh;
   margin: 0;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  border-radius: 3px 3px 0 0;
   object-fit: cover;
   object-position: center center;
 }
 .portCard_top video {
   width: 100%;
-  height: 30vh;
-  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  height: 40vh;
+  border-radius: 3px 3px 0 0;
   background-size: cover;
   object-fit: cover;
 }

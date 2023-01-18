@@ -250,10 +250,10 @@ export default {
 }
 .portCard_tagSpan {
   background: var(--off);
-  /* border: 1px solid var(--off); */
-  color: var(--heavy);
+  border: 1px solid var(--text);
+  color: var(--text);
   padding: 0px 10px 1px;
-  margin: 0 5px 5px 0;
+  margin: 0 5px 3px 0;
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 13px;

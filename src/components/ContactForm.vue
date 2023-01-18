@@ -143,7 +143,7 @@ form {
   display: flex;
   flex-direction: column;
   color: var(--text);
-  margin: 10px 0 0;
+  margin: 30px 20px;
 }
 .field {
   display: flex;
@@ -182,37 +182,39 @@ select {
   height: auto;
   font-weight: 600;
   outline: 0;
-  padding: 15px;
-  margin: 5px 0 0;
+  padding: 20px;
+  margin: 10px 0 0;
   max-width: 100%;
   color: var(--text);
   border-radius: 5px;
   transition: var(--transition-fastest);
-  border: 1px solid var(--heavy);
+  border: 2px solid var(--heavy-op);
   background: var(--off);
 }
 input[type="text"]:hover,
 input[type="email"]:hover,
 textarea:hover,
 select:hover {
-  border-color: var(--heavy);
+  border-color: var(--text);
+  background: var(--off);
+  transform: translate(3px, -3px);
+  box-shadow: -3px 3px var(--heavy);
   /* color: var(--heavy); */
 }
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus,
 select:focus {
-  border-color: var(--heavy);
+  border-color: var(--text);
   background: var(--light);
-  box-shadow: 0 0 8px var(--heavy-op);
-  /* border-radius: 0px; */
-  color: var(--text);
+  transform: translate(3px, -3px);
+  box-shadow: -3px 3px var(--heavy);
 }
 input[type="submit"] {
-  transition: var(--transition-fastest);
-  background-color: var(--heavy);
+  transition: var(--transition-faster);
+  background-color: var(--light);
   border: 2px solid var(--heavy);
-  color: var(--btn-text);
+  color: var(--text);
   font-size: 18px;
   letter-spacing: 1px;
   font-weight: 600;
@@ -223,15 +225,15 @@ input[type="submit"] {
   width: auto;
 }
 input[type="submit"]:hover {
-  background-color: var(--off);
-  /* border-radius: 0; */
-  color: var(--heavy);
-  border: 2px solid var(--heavy);
+  border-color: var(--text);
+  background: var(--off);
+  transform: translate(3px, -3px);
+  box-shadow: -3px 3px var(--heavy);
 }
 input::placeholder,
 textarea::placeholder {
-  color: var(--heavy-op);
-  font-weight: 400;
+  color: var(--heavy);
+  font-weight: 500;
 }
 
 .alert {

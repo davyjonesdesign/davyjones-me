@@ -189,7 +189,7 @@ ul,
 ol,
 li {
   font-family: "Lato", sans-serif;
-  color: var(--text)
+  color: var(--text);
 }
 h1 {
   font-weight: 800;
@@ -203,7 +203,6 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 20px;
-
 }
 h3 {
   font-size: 1.5rem;
@@ -224,7 +223,6 @@ h5 {
   font-size: 1.1rem;
   font-weight: 400;
   margin-bottom: 10px;
-
 }
 h6 {
   font-size: 0.75rem;
@@ -232,7 +230,6 @@ h6 {
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 10px;
-
 }
 p {
   margin: 0 0 15px;
@@ -254,7 +251,8 @@ label,
 textarea {
   font-family: "Lato", sans-serif;
 }
-ul, ol {
+ul,
+ol {
   padding: 5px 0 10px 20px;
   font-weight: 300;
   /* line-height: 1.5rem; */
@@ -318,7 +316,7 @@ li {
   transition: var(--transition-faster);
 }
 .carousel button svg {
-  fill:var(--text)
+  fill: var(--text);
 }
 .carousel button:hover {
   background: var(--off);

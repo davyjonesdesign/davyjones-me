@@ -327,7 +327,7 @@ const data = [
       "I polished the ideas up using Illustrator and presented them to the team. We agreed on one that met the desired results the team was looking for. I then developed a more robust brand by providing social media graphics and mockups of this logo in use. Though they did not pursue a full style guide, I provided them a basic logo guide along with assets.",
     ],
   },
-  
+
   {
     alias: "drifting",
     title: "drifting",
@@ -542,7 +542,7 @@ const data = [
       "This project addresses my design practice now and in the future. After a semester of focusing on design history and thought, I developed a script focused on conveying my conclusions and goals.",
       "After finalizing the script, I recorded audio and video while designing motion graphics. I brought everything together and went through many rounds of peer reviews before landing on a cleaner final version.",
     ],
-  }
+  },
 ];
 
 export default data;

@@ -27,9 +27,11 @@
       </svg>
     </button>
 
-    <div :class="{ isOpenNow: isOpen }"
-    :id="`collapse${_uid}`"
-    class="collapsed-content">
+    <div
+      :class="{ isOpenNow: isOpen }"
+      :id="`collapse${_uid}`"
+      class="collapsed-content"
+    >
       <slot name="content" />
     </div>
   </div>
@@ -62,11 +64,11 @@ export default {
   background: var(--light);
   outline: none;
   color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -75,7 +77,6 @@ export default {
   cursor: pointer;
   background: var(--menuBack);
   transition: var(--transition-fastest);
-
 }
 .acc-control svg {
   width: 20px;
@@ -83,12 +84,8 @@ export default {
   color: var(--heavy);
   /* transform: rotate(-90deg); */
   /* transform: rotate(-90deg); */
-
-
 }
 .isCool {
   transform: rotate(-180deg);
-  
 }
-
 </style>

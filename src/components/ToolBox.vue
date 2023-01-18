@@ -550,33 +550,35 @@ table {
 } */
 .toolbox-wrapper {
   width: 100%;
+  background: var(--menuBack);
+  border: 2px solid var(--outline);
+  border-radius: 5px;
+  padding: 0 0 20px;
 }
 table {
-  border-spacing: 10px;
-  margin: 0 auto;
+  border-spacing: 20px;
+  margin: 10px auto;
 }
 
 th {
-  font-size: 0.7rem;
+  font-size: 1rem;
   letter-spacing: 0px;
   font-weight: 500;
   font-style: italic;
-  /* background: var(--off); */
-  /* border: 1px solid var(--light); */
   padding: 7px 20px;
   color: var(--heavy);
 }
 thead th {
   text-align: center;
   border-radius: 0;
-  border-bottom: 1px solid var(--text);
-  color: var(--text);
-  font-size: 1rem;
+  border-bottom: 4px solid var(--outline);
+  color: var(--heavy);
+  font-size: 1.25rem;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 5px;
   font-weight: 900;
-  padding: 10px 0;
+  padding: 10px 0 15px;
 }
 td,
 th {
@@ -584,21 +586,26 @@ th {
   background: none;
   text-align: center;
   padding: 0;
-  border-radius: var(--border-radius);
+  border-radius: 5px;
   width: 25%;
 }
 td {
   padding: 10px 30px;
   /* text-decoration: underline; */
-  background: var(--menuBack);
+  background: var(--light);
+  border: 2px solid var(--heavy);
+  transition: var(--transition-faster);
 }
 td:hover,
 td:active {
-  background: var(--heavy);
-  /* border-color: var(--heavy); */
-  color: var(--light);
+  background: var(--off);
+  border-color: var(--text);
+  box-shadow: -3px 3px var(--heavy);
+  transform: translate(3px, -3px);
+  color: var(--text);
   text-decoration: none;
   cursor: pointer;
+  z-index: 100;
 }
 
 /* tooltip */
@@ -611,19 +618,19 @@ td:active {
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 200%;
-  background-color: var(--light);
+  background-color: var(--off);
   color: var(--text);
   text-align: center;
   border-radius: 6px;
   padding: 10px 15px 12px;
-  border: 1px solid var(--heavy);
+  border: 2px solid var(--text);
   font-size: 14px;
   line-height: 1.2rem;
   text-align: left;
   /* Position the tooltip */
   position: absolute;
-  z-index: 1;
-  top: 0%;
+  z-index: 10;
+  top: -1%;
   left: calc(100% + 5px);
   margin-left: 0;
 }
@@ -654,14 +661,18 @@ td:active {
 }
 .empty-cell {
   background: none;
+  border: none;
+  box-shadow: none;
 }
 .empty-cell:hover {
   background: none;
 }
 
 .clicked {
-  background: var(--heavy);
-  color: var(--light);
+  background: var(--off);
+  border-color: var(--text);
+  box-shadow: -3px 3px var(--heavy);
+  color: var(--text);
 }
 @media (max-width: 960px) {
   td {
