@@ -639,8 +639,10 @@
               </div>
             </div>
           </div>
+          <div class="rule-thin"></div>
 
           <h4>Footer</h4>
+          <p>more to come...</p>
         </div>
       </template>
     </accordion>
@@ -775,7 +777,7 @@ export default {
   padding: 30px 40px 30px 20px;
 }
 .isOpenNow {
-  max-height: 2000px;
+  max-height: 3000px;
   transition: max-height 0.35s ease-in;
 }
 .grid {
@@ -897,20 +899,7 @@ export default {
 .burger-wrap {
   padding-right: 10px;
 }
-@media (max-width: 960px) {
-  .nav_ds-display {
-    display: flex;
-    position: relative;
-    z-index: 0;
-  }
-  .system-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: calc(100% - 40px);
-    margin: 0px 20px;
-    padding: 20px;
-  }
-}
+
 #burgerCopy {
   display: flex;
   position: relative;
@@ -958,7 +947,7 @@ export default {
   overflow-y: auto;
   background-color: var(--light);
   position: relative;
-  height: 100vh;
+  height: 720px;
   z-index: 999;
   padding: 0 20px 0 20px;
   width: 400px;
@@ -966,5 +955,31 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+/* media queries */
+@media (max-width: 960px) {
+  .nav_ds-display {
+    display: flex;
+    position: relative;
+    z-index: 0;
+  }
+  .system-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 40px);
+    margin: 0px 20px;
+    padding: 20px;
+  }
+  .mobile-menu-entries {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .system-wrapper {
+    width: calc(100% - 20px);
+    margin: 30px 10px 0;
+    padding: 10px;
+  }
 }
 </style>

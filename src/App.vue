@@ -421,14 +421,15 @@ ul.sidebar-panel-nav > li > a {
   .port-container_home .splash-btn {
     margin: 0%;
   }
-  .about-home .table-wide {
+  .about-home .table-slim {
     margin: 0;
   }
   .about-home h1 {
     margin: 0 0 10px;
   }
   .about-home table {
-    margin: 0;
+    margin: 0 5px;
+    border-spacing: 10px;
   }
   .about-home td {
     padding: 2px;

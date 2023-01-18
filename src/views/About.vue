@@ -236,7 +236,11 @@ export default {
     margin: 0 0 150px;
   }
   .header-block h1 {
+    color: var(--btn-text);
     margin: 0;
+  }
+  .header-block .back-link {
+    color: var(--btn-text);
   }
   .about-content {
     margin: 0 0;
@@ -251,13 +255,9 @@ export default {
     height: 40vh;
   }
   .image-overlay {
-    background-image: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.575),
-      transparent
-    );
+    background-image: linear-gradient(180deg, rgb(0, 0, 0), transparent);
     width: 100vw;
-    height: 104px;
+    height: 200px;
     position: fixed;
     top: 0;
   }

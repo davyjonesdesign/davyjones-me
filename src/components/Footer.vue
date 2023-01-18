@@ -30,15 +30,15 @@
         </router-link>
       </div>
     </div>
-    <div class="design-system">
+    <div class="design-system_footer">
       <p>
-        Click on the text link to see the 
+        Click on the text link to see the
         <router-link
-              @click="scrollToTop()"
-              to="/design-system"
-              class="footer-link inline-link"
-              >Full Design System</router-link
-            >
+          @click="scrollToTop()"
+          to="/design-system"
+          class="footer-link inline-link"
+          >Full Design System</router-link
+        >
         developed for this website.
       </p>
     </div>
@@ -242,6 +242,9 @@ button.scrollTop.bounce:hover {
     margin-left: 0;
     text-align: center;
   }
+  button.scrollTop.bounce {
+    top: 0px;
+  }
 }
 
 .bounce {
@@ -266,13 +269,16 @@ button.scrollTop.bounce:hover {
 @media (max-width: 960px) {
   .foot-wrapper {
     /* margin: 20px 5px 5px; */
-    padding: 20px 15px;
+    padding: 10px 15px;
   }
   .lottie-animation-container {
     max-width: 30vw;
   }
   .foot-copy {
     width: 95vw;
+  }
+  .design-system_footer {
+    text-align: center;
   }
 }
 @media (max-height: 450px) {

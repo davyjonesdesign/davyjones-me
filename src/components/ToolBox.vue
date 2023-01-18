@@ -255,7 +255,7 @@
         </td>
         <td class="tooltip" @click="aeClick()" :class="{ clicked: aeHid }">
           After Effects<span
-            class="tooltiptext right higher"
+            class="tooltiptext right"
             :class="{ visible: aeHid }"
             >Adobe After Effects is a digital visual effects, motion graphics,
             and compositing application used in the post-production process of
@@ -665,6 +665,7 @@ td:active {
   box-shadow: none;
 }
 .empty-cell:hover {
+  box-shadow: none;
   background: none;
 }
 
@@ -678,8 +679,13 @@ td:active {
   td {
     padding: 10px;
   }
+  thead th {
+    margin: 5px auto;
+    padding: 5px 0;
+    border-bottom: 1px solid var(--outline);
+  }
   .table-slim th {
-    text-align: left;
+    text-align: center;
   }
 }
 @media (max-width: 640px) {
@@ -690,6 +696,8 @@ td:active {
   }
   .table-slim {
     display: block;
+    border-spacing: 7px;
+    margin: 0 auto;
   }
   .tooltip .tooltiptext {
     width: 110%;

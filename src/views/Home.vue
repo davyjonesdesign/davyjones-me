@@ -36,9 +36,8 @@
       <div class="about-dets">
         <div class="about-dets_content">
           <p>
-            I've been in the graphic and web design world for 6 years and have
-            filled many roles while operating a design practice and working on a
-            Masters Program.
+            I have been a Graphic and UX/UI Web Designer for 6 years while
+            freelancing and working towards a Master's.
           </p>
         </div>
         <ToolBox />

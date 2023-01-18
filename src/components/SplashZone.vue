@@ -179,6 +179,7 @@ button.scrollTop.bounce:hover {
   }
   button.scrollTop.bounce {
     left: calc(50% - 30px);
+    bottom: 120px;
   }
   th {
     font-size: 0.7rem;
