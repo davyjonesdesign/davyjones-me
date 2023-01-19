@@ -7,7 +7,7 @@
           <h1>Contact</h1>
           <BackButton />
         </div>
-        <div class="form-container">
+        <div class="">
           <ContactForm />
         </div>
       </div>

@@ -143,7 +143,7 @@ form {
   display: flex;
   flex-direction: column;
   color: var(--text);
-  margin: 30px 20px;
+  /* margin: 30px 20px; */
 }
 .field {
   display: flex;
@@ -168,11 +168,6 @@ form {
 .form-names input {
   width: 100%;
 }
-.item {
-  background: var(--light);
-  border-radius: 3px;
-  padding: 16px 16px;
-}
 input[type="text"],
 input[type="email"],
 textarea,
@@ -182,14 +177,14 @@ select {
   height: auto;
   font-weight: 600;
   outline: 0;
-  padding: 20px;
+  padding: 15px 20px;
   margin: 10px 0 0;
   max-width: 100%;
   color: var(--text);
   border-radius: 5px;
   transition: var(--transition-fastest);
-  border: 2px solid var(--heavy-op);
-  background: var(--off);
+  border: 2px solid var(--heavy);
+  background: var(--light);
 }
 input[type="text"]:hover,
 input[type="email"]:hover,
@@ -215,14 +210,14 @@ input[type="submit"] {
   background-color: var(--light);
   border: 2px solid var(--heavy);
   color: var(--text);
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  padding: 10px;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+  padding: 15px 10px;
   margin: 10px 0 0;
   cursor: pointer;
   border-radius: 5px;
-  width: auto;
+  max-width: 300px;
 }
 input[type="submit"]:hover {
   border-color: var(--text);
@@ -232,8 +227,8 @@ input[type="submit"]:hover {
 }
 input::placeholder,
 textarea::placeholder {
-  color: var(--heavy);
-  font-weight: 500;
+  color: var(--text);
+  font-weight: 700;
 }
 
 .alert {
@@ -253,6 +248,9 @@ textarea::placeholder {
 .pipe {
   margin: 0 10px;
   font-weight: 400;
+}
+.label {
+  display: none;
 }
 @media (max-width: 600px) {
   .name-field {
