@@ -201,7 +201,7 @@ input[type="email"]:focus,
 textarea:focus,
 select:focus {
   border-color: var(--text);
-  background: var(--light);
+  background: var(--off);
   transform: translate(3px, -3px);
   box-shadow: -3px 3px var(--heavy);
 }
@@ -229,6 +229,7 @@ input::placeholder,
 textarea::placeholder {
   color: var(--text);
   font-weight: 700;
+  opacity: 1;
 }
 
 .alert {
@@ -253,6 +254,9 @@ textarea::placeholder {
   display: none;
 }
 @media (max-width: 600px) {
+  input[type="submit"] {
+    max-width: 100%;
+  }
   .name-field {
     flex-direction: column;
   }
