@@ -1,12 +1,10 @@
 .theme-button {
-    /* margin: 6px; */
-    /* position: fixed; */
-    /* top: 6px; */
-    /* left: calc(50vw - calc(var(--element-size) * 0.65)); */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px 0;
+    margin: 20px 0;
+    justify-content: center;
+    height: 100%;
 }
 .theme-button h6{
   margin: 5px;

@@ -101,8 +101,8 @@
 .mobile-links .link-btn {
   display: flex;
   background: var(--light);
-  padding: 25px;
-  margin: 5px 0;
+  padding: 15px;
+  margin: 5px 0 0;
   flex-direction: row-reverse;
   width: 100%;
   border: 2px solid var(--light);
@@ -122,7 +122,7 @@
 .mobile-links .link-btn:hover, .mobile-links .router-link-exact-active {
   color: var(--heavy);
   background-color: var(--off);
-  border-radius: 10px;
+  border-radius: 5px;
   border-color: var(--heavy);
 }
 .mobile-links .link-btn:hover .nav-link_text, .mobile-links .router-link-exact-active .nav-link_text {

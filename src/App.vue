@@ -345,14 +345,15 @@ ul.sidebar-panel-nav > li > a {
   color: var(--light);
   border: 2px solid var(--heavy);
   margin: 20px 0 0;
-  padding: 20px;
+  padding: 25px 20px;
 }
 
 .splash-btn .nav-link_text {
   font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
   height: 100%;
   color: var(--text);
-  /* font-weight: 800; */
   opacity: 1;
 }
 .splash-btn:hover {
@@ -408,6 +409,11 @@ ul.sidebar-panel-nav > li > a {
   h5,
   p {
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .splash-btn {
+    width: 100%;
   }
 }
 @media (max-height: 450px) {

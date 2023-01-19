@@ -20,7 +20,6 @@
         alt="picture of me, Davy Jones"
       />
       <div class="footer-msg">
-        <h3>Thanks for visiting!</h3>
         <router-link
           class="link link-btn splash-btn footer-btn"
           to="/contact"
@@ -32,7 +31,7 @@
     </div>
     <div class="design-system_footer">
       <p>
-        Click on the text link to see the
+        Check out the
         <router-link
           @click="scrollToTop()"
           to="/design-system"
@@ -220,9 +219,9 @@ button.scrollTop.bounce:hover {
   box-shadow: 0 0 10px var(--heavy);
 }
 .footer-btn {
-  padding: 10px;
-  min-width: 220px;
-  margin: 10px 0 0;
+  padding: 25px 20px;
+  min-width: 300px;
+  margin: 30px 0 0;
 }
 .copy-small {
   display: none;

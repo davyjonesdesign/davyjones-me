@@ -29,11 +29,11 @@
     top: 0;
     height: 100vh;
     z-index: 999;
-    padding: 0 20px 0 20px;
+    padding: 0 5px;
     width: 65vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 .sidebar-top {
