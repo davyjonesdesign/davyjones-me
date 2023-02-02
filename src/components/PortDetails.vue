@@ -532,14 +532,20 @@ button.scrollUp.bounce {
   .port-section-content {
     flex-direction: column;
   }
-
-  .port-heading-container {
-    /* margin-top: 10vh; */
+  .port-section-content p {
+    margin-right: 0px;
+  }
+  .port-section-content h4 {
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  .port-section-content ul {
+    padding: 5px 0 0 20px;
   }
   .port-content-details {
     flex-direction: column;
     padding: 5px 20px;
-    margin: 40px 0;
+    margin: 20px 0;
   }
   .port-content-details .col-3 {
     display: flex;
@@ -560,6 +566,11 @@ button.scrollUp.bounce {
   .port-content-details p {
     text-align: right;
     line-height: 1.25rem;
+  }
+}
+@media (max-width: 600px) {
+  .port-content iframe {
+    min-height: 350px;
   }
 }
 </style>

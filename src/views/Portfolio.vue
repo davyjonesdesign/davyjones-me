@@ -85,6 +85,10 @@ export default {
           label: "dev/programming",
         },
         {
+          value: "figma",
+          label: "figma",
+        },
+        {
           value: "vue",
           label: "vue",
         },

@@ -175,8 +175,8 @@ html::-webkit-scrollbar {
   display: flex;
   flex-direction: column;
   /* align-items: center; */
-  width: calc(100vw - 15px);
-  overflow: hidden;
+  width: 100vw;
+  overflow-x: hidden;
 }
 .overflow {
   height: 100vh;

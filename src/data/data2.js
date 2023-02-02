@@ -38,7 +38,7 @@ const data2 = [
   },
   {
     alias: "watermark",
-    title: "Watermark Bible Studies",
+    title: "Watermark",
     subtitle: "Bible Study Web App Designed and Developed with Vue Framework",
     role: "Solo Brand/UX/UI Designer and Developer",
     targAud: "Pastors, Bible Scholars, and people interested in Bible study",
@@ -85,21 +85,13 @@ const data2 = [
   },
   {
     alias: "airbnb",
-    title: "Airbnb Rebrand and Website Redesign",
+    title: "Airbnb Redesign",
     subtitle: "Bible Study Web App Designed and Developed with Vue Framework",
     role: "Solo Brand/UX/UI Designer and Developer",
     targAud: "Older women in their sixties",
     duration: "August 2021 - December 2021",
-    tag: ["branding", "ux/ui design"],
+    tag: ["branding", "ux/ui design", "figma"],
     links: [
-      {
-        link: "https://www.figma.com/proto/bLww2BBvNUsjAAZbIOgu4w/airbnb-redesign?node-id=317%3A1591&scaling=scale-down&page-id=301%3A751&starting-point-node-id=317%3A1591&hide-ui=1",
-        linkDescription: "Project Overview",
-      },
-      {
-        link: "https://www.figma.com/proto/pP3gPoziHkUfTXNzMu8Cmr/6.3-updated-brand-style-guide_v3?node-id=2%3A3&scaling=scale-down&page-id=0%3A1&starting-point-node-id=2%3A3&hide-ui=1",
-        linkDescription: "Brand Style Guide",
-      },
       {
         link: "https://www.figma.com/proto/bLww2BBvNUsjAAZbIOgu4w/airbnb-redesign?node-id=317%3A1614&scaling=scale-down&page-id=0%3A1&starting-point-node-id=317%3A1614&hide-ui=1",
         linkDescription: "Figma Design System",
