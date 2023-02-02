@@ -15,7 +15,7 @@ export default {
   },
   mounted() {
     console.log(this.mouseX);
-    var hello = "#b8d9ff";
+    var hello = "#E5E5F1";
     const script = function (p5) {
       var particles = [];
 
@@ -79,9 +79,9 @@ export default {
 
           // Method to display
           this.paint = function () {
-            p5.stroke(75, 150, h, lifespan);
+            p5.stroke(125, 135, h, lifespan);
             p5.strokeWeight(1);
-            p5.fill(220, 220, h, lifespan);
+            p5.fill(220, 230, h, lifespan);
             p5.ellipse(loc.x, loc.y, sz, sz);
           };
 

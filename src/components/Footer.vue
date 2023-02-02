@@ -1,14 +1,13 @@
 <template>
   <div class="foot-wrapper">
     <div class="foot-top">
-      <button class="scrollTop bounce" @click="scrollToElement('#top')">
-        <svg
-          id="a"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 23.17157 13.94712"
-        >
+      <button class="scrollUp bounce" @click="scrollToElement('#top')">
+        <svg id="a" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path
-            d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+            d="m23.78771,11.48767L12.51248.21229c-.28305-.28306-.74197-.28305-1.02502,0L.21229,11.48767c-.28305.28306-.28305.74198,0,1.02504l1.02502,1.02501c.28305.28305.74196.28304,1.02501,0L12.00003,3.79988l9.73764,9.73783c.28305.28305.74196.28306,1.02501,0l1.02502-1.025c.28306-.28305.28306-.74198,0-1.02504Z"
+          />
+          <path
+            d="m23.78771,21.73767l-11.27523-11.27538c-.28305-.28306-.74197-.28305-1.02502,0L.21229,21.73767c-.28305.28306-.28305.74198,0,1.02504l1.02502,1.02501c.28305.28305.74196.28304,1.02501,0l9.7377-9.73783,9.73764,9.73783c.28305.28305.74196.28306,1.02501,0l1.02502-1.025c.28306-.28305.28306-.74198,0-1.02504Z"
           />
         </svg>
       </button>
@@ -40,6 +39,27 @@
         >
         developed for this website.
       </p>
+    </div>
+    <div class="vue-built">
+      <p>Built with Vue.</p>
+      <svg
+        class="logo"
+        viewBox="0 0 128 128"
+        width="24"
+        height="24"
+        data-v-e0ef77de=""
+      >
+        <path
+          fill="#42b883"
+          d="M78.8,10L64,35.4L49.2,10H0l64,110l64-110C128,10,78.8,10,78.8,10z"
+          data-v-e0ef77de=""
+        ></path>
+        <path
+          fill="#35495e"
+          d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
+          data-v-e0ef77de=""
+        ></path>
+      </svg>
     </div>
     <div>
       <Social />
@@ -104,6 +124,8 @@ export default {
 };
 </script>
 <style scoped>
+@import "../styles/ScrollUpButton.css";
+
 .foot-wrapper {
   height: 100vh;
   scroll-snap-align: center;
@@ -158,42 +180,6 @@ export default {
   color: var(--text);
   text-decoration: underline;
 }
-button.scrollTop.bounce {
-  margin: 0px 0 0px;
-  color: var(--heavy);
-  transition: var(--transition-faster);
-  border: 2px solid var(--heavy);
-  background: var(--light);
-  border-radius: 5px;
-  outline: inherit;
-  font-weight: 600;
-  font-size: 1rem;
-}
-button.scrollTop.bounce:hover {
-  cursor: pointer;
-  border: 2px solid var(--text);
-  box-shadow: -3px 5px var(--heavy);
-}
-.scrollTop svg {
-  transition: var(--transition-faster);
-
-  fill: var(--text);
-  cursor: pointer;
-  /* transform: rotate(-90deg); */
-  width: 60px;
-  /* border-radius: var(--border-radius); */
-  padding: 16px 10px 14px;
-  /* margin-right: 5px; */
-  /* border-radius: var(--border-radius); */
-  /* background: var(--heavy); */
-  /* border: 2px solid var(--heavy); */
-}
-.scrollTop:hover svg {
-  /* background: var(--light); */
-  fill: var(--text);
-  cursor: pointer;
-  background: var(--off);
-}
 .footer-splash {
   display: flex;
   flex-direction: row;
@@ -219,12 +205,25 @@ button.scrollTop.bounce:hover {
   box-shadow: 0 0 10px var(--heavy);
 }
 .footer-btn {
-  padding: 25px 20px;
+  /* padding: 25px 20px; */
   min-width: 300px;
   margin: 30px 0 0;
 }
 .copy-small {
   display: none;
+}
+.vue-built {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+.vue-built p {
+  margin: 0;
+}
+.vue-built svg {
+  margin: 5px;
+  min-width: 40px;
+  min-height: 40px;
 }
 @media (max-width: 640px) {
   .copy-small {
@@ -241,7 +240,7 @@ button.scrollTop.bounce:hover {
     margin-left: 0;
     text-align: center;
   }
-  button.scrollTop.bounce {
+  button.scrollUp.bounce {
     top: 0px;
   }
 }
@@ -264,6 +263,8 @@ button.scrollTop.bounce:hover {
 .foot-top {
   display: flex;
   flex-direction: column;
+  margin: 20px 0;
+  width: 100%;
 }
 @media (max-width: 960px) {
   .foot-wrapper {

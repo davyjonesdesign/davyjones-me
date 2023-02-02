@@ -136,33 +136,6 @@ const data = [
     ],
   },
   {
-    alias: "hums-whistles",
-    title: "hums & whistles",
-    subtitle: "digital instrument",
-    date: "Spring 2021",
-    tag: ["dev/programming"],
-    imgDim: "rect",
-    img: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
-    imgs: [
-      {
-        src: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
-        title: "Hums & Whistles",
-        width: "40vw",
-        dimension: "landscape",
-      },
-    ],
-    links: [
-      {
-        link: "https://djones794.studio.mcad.edu/pftw-spring21/wk12/assignment/",
-        linkDescription: "Hums & Whistles",
-      },
-    ],
-    description: [
-      "The intension behind this piece is an accessible and unique digital instrument. This instrument would have audial output and analogous visual expressions. I recorded some sounds and settled on a few of my wife’s hums and whistles.",
-      "I then used the P5 library to load sounds and connected their levels to expanding rectangles. Colorful rectangles pop on top of the muted, gray background. By pressing the parallel keystrokes, the user can hear and see the results.",
-    ],
-  },
-  {
     alias: "forward",
     title: "forward",
     subtitle: "full brand and web design for industrial marketing firm",
@@ -224,6 +197,33 @@ const data = [
     ],
     description: [
       "With the marketing team at Central Wire Industries, I designed a bold and industrial focused brand and website.",
+    ],
+  },
+  {
+    alias: "hums-whistles",
+    title: "hums & whistles",
+    subtitle: "digital instrument",
+    date: "Spring 2021",
+    tag: ["dev/programming"],
+    imgDim: "rect",
+    img: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
+    imgs: [
+      {
+        src: "https://davyjonesdesign.github.io/data-for-axios/assets/hums-whistles.jpg",
+        title: "Hums & Whistles",
+        width: "40vw",
+        dimension: "landscape",
+      },
+    ],
+    links: [
+      {
+        link: "https://djones794.studio.mcad.edu/pftw-spring21/wk12/assignment/",
+        linkDescription: "Hums & Whistles",
+      },
+    ],
+    description: [
+      "The intension behind this piece is an accessible and unique digital instrument. This instrument would have audial output and analogous visual expressions. I recorded some sounds and settled on a few of my wife’s hums and whistles.",
+      "I then used the P5 library to load sounds and connected their levels to expanding rectangles. Colorful rectangles pop on top of the muted, gray background. By pressing the parallel keystrokes, the user can hear and see the results.",
     ],
   },
   {

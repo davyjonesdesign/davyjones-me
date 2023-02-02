@@ -30,7 +30,7 @@ export default {
     showToggle() {
       setTimeout(() => {
         this.show = false;
-      }, 2500);
+      }, 1275);
     },
   },
 };
@@ -45,7 +45,7 @@ export default {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background-color: var(--light);
+  background-color: var(--light-opacity);
   z-index: 99999999;
   overflow: hidden;
 }

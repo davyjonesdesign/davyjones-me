@@ -1,0 +1,51 @@
+button.scrollUp.bounce {
+  color: var(--text);
+  transition: var(--transition-faster);
+  background: var(--light);
+  border: 2px solid var(--heavy);
+  outline: inherit;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 100;
+  width: 60px;
+  min-height: 60px;
+}
+button.scrollUp.bounce:hover {
+  cursor: pointer;
+  border: 2px solid var(--text);
+  background: var(--off);
+  box-shadow: -3px 3px var(--heavy);
+}
+.scrollUp svg {
+  transition: var(--transition-faster);
+  fill: var(--text);
+  width: 45px;
+  padding: 8px 6px 4px;
+}
+.scrollUp:hover svg {
+  fill: var(--text);
+  cursor: pointer;
+  background: var(--off);
+}
+.bounce {
+  -moz-animation: bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  -webkit-animation: bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation: bounce 0.5s cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 8px, 0);
+  }
+}
+@media (max-width: 960px) {
+  button.scrollTop.bounce {
+    left: calc(50% - 30px);
+    bottom: 120px;
+  }
+}

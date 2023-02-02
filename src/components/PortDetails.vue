@@ -1,260 +1,332 @@
 <template>
-  <div>
-    <div v-if="port" class="port-wrapper">
-      <div class="det-splash" :class="{ hideDetSplash: isActive }">
-        <img
-          v-if="port.img"
-          :src="port.img"
-          v-bind:alt="port.title"
-          v-bind:class="port.imgDim"
-        />
+  <div v-if="port" class="port-wrapper">
+    <div class="port-splash">
+      <img
+        class="port-img"
+        v-bind:alt="port.splashImg"
+        v-if="port.splashImg"
+        :src="port.splashImg"
+      />
+      <div class="img-overlay"></div>
+    </div>
+    <div class="port-heading" id="top">
+      <BackButton class="port-det-back" />
 
-        <div class="vid-wrapper">
-          <video
-            :poster="port.vidPoster"
-            ref="myvideo"
-            v-if="port.vid"
-            loop
-            controls
-            :src="port.vid"
-            v-bind:alt="port.title"
-            @click="playBtn"
-            v-bind:class="port.imgDim"
-          ></video>
-          <div
-            class="playpause"
-            v-if="port.vid && !isHidden"
-            @click="
-              () => {
-                play();
-                playBtn();
-              }
-            "
+      <div class="port-heading-container">
+        <div class="port-heading-content">
+          <h1>{{ port.title }}</h1>
+          <div class="hash-line"></div>
+          <h5>
+            {{ port.subtitle }}
+          </h5>
+        </div>
+        <div class="port-content-details">
+          <div class="col-3">
+            <h6>Role</h6>
+            <p>{{ port.role }}</p>
+          </div>
+          <div class="col-3">
+            <h6>Target Audience</h6>
+            <p>{{ port.targAud }}</p>
+          </div>
+          <div class="col-3 col-3_last">
+            <h6>Duration</h6>
+            <p>{{ port.duration }}</p>
+          </div>
+        </div>
+        <div class="project-link_wrapper" v-if="port.links">
+          <a
+            class="web-project_link"
+            v-for="(link, index) in port.links"
+            :key="index"
+            v-bind:href="link.link"
+            target="_blank"
+            rel="noreferrer noopener"
           >
+            {{ link.linkDescription }}
             <svg
+              version="1.1"
+              id="a"
               xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 18.43288 20.80426"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              x="0px"
+              y="0px"
+              viewBox="0 0 24 24"
+              style="enable-background: new 0 0 24 24"
+              xml:space="preserve"
             >
-              <g id="a" />
-              <g id="b">
-                <g id="c">
-                  <path
-                    class="d"
-                    d="M17.64931,9.04496L2.35069,.21229C1.30594-.39089,0,.36309,0,1.56946V19.23479c0,1.20637,1.30594,1.96036,2.35069,1.35717l15.29863-8.83267c1.04475-.60319,1.04475-2.11115,0-2.71434Z"
-                  />
-                </g>
+              <g>
+                <path
+                  d="M23.3,0h-1.7h-9C12.3,0,12,0.3,12,0.7v1.7C12,2.7,12.3,3,12.7,3h5.5l-9.3,9.3c-0.4,0.4-0.4,1,0,1.3l1.5,1.5
+		c0.4,0.4,1,0.4,1.3,0L21,5.8v5.5c0,0.4,0.3,0.7,0.7,0.7h1.7c0.4,0,0.7-0.3,0.7-0.7v-9V0.7C24,0.3,23.7,0,23.3,0z"
+                />
+                <path
+                  d="M17.1,20H4V6.9C4,6.4,3.6,6,3.1,6H0.9C0.4,6,0,6.4,0,6.9v14v2.1C0,23.6,0.4,24,0.9,24h2.1h14c0.5,0,0.9-0.4,0.9-0.9v-2.1
+		C18,20.4,17.6,20,17.1,20z"
+                />
               </g>
             </svg>
-          </div>
+          </a>
         </div>
       </div>
-
-      <!-- header -->
-      <div class="det-header">
-        <div>
-          <h3 class="port-title" id="top">{{ port.title }}</h3>
-          <!-- <router-link class="back-link" to="/portfolio">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.97058 20"><g id="a"/><g id="b"><g id="c"><polygon class="d" points="16.97058 8.48529 8.48529 0 0 8.48529 5.24298 8.48529 5.24298 20 11.24298 20 11.24298 8.48529 16.97058 8.48529"/></g></g></svg>
-            Back
-          </router-link> -->
-          <p class="portDate">{{ port.date }}</p>
-        </div>
-
-        <BackButton />
-      </div>
-
-      <!-- detail wrapper -->
-      <div class="det-wrapper">
-        <!-- content -->
-        <div class="left-wrapper">
-          <p class="portLink-header" v-if="port.links">Links</p>
-          <div class="project-link_wrapper" v-if="port.links">
-            <a
-              class="web-project_link"
-              v-for="(link, index) in port.links"
-              :key="index"
-              v-bind:href="link.link"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              {{ link.linkDescription }}
-            </a>
-          </div>
-          <div class="port_descr">
-            <p v-for="item in port.description" :key="item">{{ item }}</p>
-          </div>
-        </div>
-
-        <!-- visuals -->
-        <div class="right-wrapper">
-          <!-- <video
-          v-if="port.vid"
-          loop
-          
-          controls
-          :src="port.vid"
-          v-bind:alt="port.title"
-          ></video> -->
-          <!-- <img
-            v-if="port.img"
-            :src="'https://davyjonesdesign.github.io/data-for-axios/' + port.img"
-            v-bind:alt="port.title"
-          /> -->
-
-          <!-- image gallery -->
-          <div class="gallery-wrapper" v-if="port.imgs">
-            <!-- <div class="flex-scroll">
-              <div
-                v-for="(img, index) in port.imgs"
-                :key="index"
-                class="gallery-img"
-                @click="() => showImg(index)"
-                >
-                <img :src="img.src" v-bind:style="{ width: img.width, height: img.height }"/>
-              </div>
-            </div> -->
-
-            <carousel :settings="settings" :breakpoints="breakpoints">
-              <slide
-                v-for="(img, index) in port.imgs"
-                :key="index"
-                class="gallery-img"
-                @click="() => showImg(index)"
-              >
-                <img :src="img.src" v-bind:class="img.dimension" />
-                <span class="expand">Expand</span>
-              </slide>
-
-              <!-- addons -->
-              <template #addons>
-                <navigation v-if="port.imgs.length > 1" />
-              </template>
-            </carousel>
-          </div>
-        </div>
-        <vue-easy-lightbox
-          scrollDisabled
-          escDisabled
-          moveDisabled
-          :visible="visible"
-          :imgs="port.imgs"
-          :index="index"
-          @hide="handleHide"
-        ></vue-easy-lightbox>
+      <div class="scroll-buttons">
+        <button
+          class="scrollDown bounce"
+          @click="scrollToElement('#port-section-1')"
+        >
+          <svg
+            id="a"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 23.17157 13.94712"
+          >
+            <path
+              d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+            />
+          </svg>
+        </button>
       </div>
     </div>
-    <intersection-observer
-      sentinal-name="sentinal-name"
-      @on-intersection-element="onIntersectionElement1"
-    ></intersection-observer>
 
-    <Foot id="foot" />
-    <intersection-observer
-      sentinal-name="sentinal-name"
-      @on-intersection-element="onIntersectionElement"
-    ></intersection-observer>
+    <div class="port-content">
+      <!-- port-section-1 -->
+      <div class="port-section port-overview" id="port-section-1">
+        <div class="port-section-content">
+          <h2>→ Overview</h2>
+          <div>
+            <p v-for="item in port.ovCont" :key="item">{{ item }}</p>
+          </div>
+        </div>
+        <div class="section-img">
+          <img v-bind:alt="port.ovImg" v-if="port.ovImg" :src="port.ovImg" />
+          <iframe
+            v-if="port.ovProto"
+            :src="port.ovProto + '%26hide-ui%3D1'"
+            allowfullscreen
+          ></iframe>
+          <p>{{ port.ovImgDes }}</p>
+        </div>
+        <div class="scroll-buttons">
+          <button
+            class="scrollDown bounce"
+            @click="scrollToElement('#port-section-2')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+          <button
+            class="scrollUp bounce scrollDown-port"
+            @click="scrollToElement('#top')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- port-section-2 -->
+      <div class="port-section port-goal" id="port-section-2">
+        <div class="port-section-content">
+          <h2>→ Goal</h2>
+          <div>
+            <p v-for="item in port.goalCont" :key="item">{{ item }}</p>
+          </div>
+        </div>
+        <div class="section-img">
+          <img
+            v-bind:alt="port.goalImg"
+            v-if="port.goalImg"
+            :src="port.goalImg"
+          />
+          <iframe
+            v-if="port.goalProto"
+            :src="port.goalProto + '%26hide-ui%3D1'"
+            allowfullscreen
+          ></iframe>
+          <p>{{ port.goalImgDes }}</p>
+        </div>
+        <div class="scroll-buttons">
+          <button
+            class="scrollDown bounce"
+            @click="scrollToElement('#port-section-3')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+          <button
+            class="scrollUp bounce scrollDown-port"
+            @click="scrollToElement('#port-section-1')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- port-section-3 -->
+      <div class="port-section port-approach" id="port-section-3">
+        <div class="port-section-content">
+          <h2>→ Approach</h2>
+          <div>
+            <p v-for="item in port.approachCont" :key="item">{{ item }}</p>
+            <div v-if="port.keyfeatCont" class="key-features">
+              <h4>Key Features</h4>
+              <ul>
+                <li v-for="item in port.keyfeatCont" :key="item">{{ item }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section-img">
+          <img
+            v-bind:alt="port.approachImg"
+            v-if="port.approachImg"
+            :src="port.approachImg"
+          />
+          <iframe
+            v-if="port.approachProto"
+            :src="port.approachProto + '%26hide-ui%3D1'"
+            allowfullscreen
+          ></iframe>
+          <p>{{ port.approachImgDes }}</p>
+        </div>
+        <div class="scroll-buttons">
+          <button
+            class="scrollDown bounce"
+            @click="scrollToElement('#port-section-4')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+          <button
+            class="scrollUp bounce scrollDown-port"
+            @click="scrollToElement('#port-section-2')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- port-section-4 -->
+      <div class="port-section port-outcome" id="port-section-4">
+        <div class="port-section-content">
+          <h2>→ Outcome</h2>
+          <div>
+            <p v-for="item in port.ocCont" :key="item">{{ item }}</p>
+          </div>
+        </div>
+        <div class="section-img">
+          <img v-bind:alt="port.ocImg" v-if="port.ocImg" :src="port.ocImg" />
+          <iframe
+            v-if="port.ocProto"
+            :src="port.ocProto + '%26hide-ui%3D1'"
+            allowfullscreen
+          ></iframe>
+          <p>{{ port.ocImgDes }}</p>
+        </div>
+        <div class="scroll-buttons">
+          <button class="scrollDown bounce" @click="scrollToElement('#foot')">
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+          <button
+            class="scrollUp bounce scrollDown-port"
+            @click="scrollToElement('#port-section-3')"
+          >
+            <svg
+              id="a"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 23.17157 13.94712"
+            >
+              <path
+                d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
+  <Foot id="foot" />
 </template>
-
 <script>
-import data from "../data/data";
-import Foot from "../components/Footer.vue";
-import VueEasyLightbox from "vue-easy-lightbox";
+import Foot from "@/components/Footer.vue";
+import data2 from "@/data/data2";
+// import VueEasyLightbox from "vue-easy-lightbox";
 import BackButton from "@/components/BackButton.vue";
-import IntersectionObserver from "@/components/IntersectionObserver.vue";
-
-// import PortService from "@/services/PortService.js";
-import "vue3-carousel/dist/carousel.css";
-import { Carousel, Slide, Navigation } from "vue3-carousel";
 
 export default {
-  components: {
-    VueEasyLightbox,
-    Carousel,
-    Slide,
-    Navigation,
-    BackButton,
-    Foot,
-    IntersectionObserver,
-  },
+  name: "PortDetailsX",
   props: ["alias"],
-  data() {
-    return {
-      port: null,
-      visible: false,
-      index: 0, // default: 0
-      // corousel
-      isActive: false,
-      isIntersectingElement: false,
-      settings: {
-        itemsToShow: 1,
-        wrapAround: true,
-        snapAlign: "center",
-      },
-      breakpoints: {
-        300: {
-          itemsToShow: 1,
-        },
-        760: {
-          itemsToShow: 1,
-        },
-        1040: {
-          itemsToShow: 1,
-        },
-        1440: {
-          itemsToShow: 1,
-        },
-      },
-      isPlaying: false,
-      isHidden: false,
-    };
+  components: {
+    Foot,
+    BackButton,
   },
   methods: {
-    showImg(index) {
-      this.index = index;
-      this.visible = true;
-    },
-    handleHide() {
-      this.visible = false;
-    },
-    play() {
-      this.$refs.myvideo.play();
-      this.isPlaying = true;
-    },
-    stop() {
-      // this.$refs.myvideo.pause()
-      this.isPlaying = false;
-    },
-    playBtn() {
-      this.isHidden = !this.isHidden;
-    },
-    onIntersectionElement(value) {
-      this.isActive = !this.isActive;
-      this.isIntersectingElement = value;
-    },
-    onIntersectionElement1(value) {
-      this.isActive = !this.isActive;
-      this.isIntersectingElement = value;
-    },
-    onIntersectionElement2(value) {
-      this.isActive = !this.isActive;
-      this.isIntersectingElement = value;
-    },
-    onIntersectionElement3(value) {
-      this.isActive = !this.isActive;
-      this.isIntersectingElement = value;
+    scrollToElement(id) {
+      // takes input id with hash
+      // eg. #cafe-menu
+      const el = document.querySelector(id);
+      el &&
+        el.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "nearest",
+        });
     },
   },
   created() {
-    // PortService.getPort(this.id)
-    //   .then((response) => {
-    //     this.port = response.data;
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
     const alias = this.$route.params.alias;
-    const port = data.find((el) => el.alias === alias);
+    const port = data2.find((el) => el.alias === alias);
     if (!port) {
       return this.$router.push("404");
     }
@@ -265,167 +337,64 @@ export default {
   },
 };
 </script>
-<style scoped>
-.det-splash {
-  /* background: var(--off); */
-  padding: 30px 0;
-  margin: 0 auto;
-  width: calc(100vw - 120px);
-  display: flex;
-  /* align-content: center; */
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  z-index: 0;
-  opacity: 1;
-  transition: var(--transition);
-}
-.det-splash img,
-.det-splash video {
-  /* max-width: 960px; */
-  /* max-height: 400px; */
-  /* width: 70vw; */
-  /* width: auto; */
-  /* box-shadow: var(--shadow); */
-  border: 2px solid var(--light);
-  border-radius: var(--border-radius);
-}
-.hideDetSplash {
-  opacity: 0;
-}
-.vid-wrapper {
-  position: relative;
-}
-.playpause {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  position: absolute;
-  border-radius: 100px;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  margin: auto;
-  cursor: pointer;
-  background: var(--menuBack);
-  transition: var(--transition-fastest);
-  /* opacity: .75; */
-}
-.playpause svg {
-  padding-left: 10px;
-  width: 60px;
-  transition: var(--transition-fastest);
-  fill: var(--heavy);
-}
-.playpause:hover {
-  background: var(--menuBack);
-  box-shadow: var(--shadow);
-}
-.playpause:hover svg {
-  transform: scale(1.1);
-}
+<style>
+@import "../styles/ScrollDownButton.css";
+@import "../styles/ScrollUpButton.css";
+
 .port-wrapper {
   margin: 0 0 0 80px;
-  /* width: 100vw; */
-  background: var(--light);
-  /* min-height: 80vh; */
 }
-.det-header {
-  display: flex;
-  position: sticky;
-  top: 72px;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin: 87vh auto 0px;
-  padding: 40px 30px 20px 20px;
-  /* max-width: 960px; */
-  z-index: 1;
-  background: var(--light);
-}
-.port-title {
-  text-transform: capitalize;
-}
-/* .back-link {
-  margin: 0 0 4px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: var(--heavy);
+.port-splash {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  width: calc(100vw - 80px);
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  opacity: 1;
   transition: var(--transition);
-}
-.back-link svg {
-  fill: var(--heavy);
-  transform: rotate(-90deg);
-  width: 32px;
-  padding: 5px 7px;
-  margin-right: 5px;
-  border-radius: 100%;
-  border: 1px solid var(--heavy);
-}
-.back-link:hover svg {
-  background: var(--heavy);
-  transform: scale(1.25);
-  transform: rotate(-90deg);
-  fill: var(--light);
-  transition: var(--transition-fastest);
-  cursor: pointer;
-}
-.back-link:hover {
-  transform: scale(1.05);
-  transition: var(--transition-fastest);
-  cursor: pointer;
-} */
-/* .det-wrapper video, .det-wrapper img {
-  width: 100%;
-} */
-.det-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  /* padding: 0px 60px; */
-  background: var(--light);
-  z-index: 1;
-  /* margin: auto; */
-  /* max-height: 67vh; */
-  /* width: calc(100vw - 14px); */
-  /* padding-bottom: 20px; */
-  min-height: 72vh;
-}
-.left-wrapper {
-  min-width: 40vw;
-  z-index: 1;
-  background: var(--light);
-  /* min-height: 70vh; */
-  padding: 0px 30px 20px 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-end;
 }
-.portLink-header {
-  margin: 0 0 5px;
-  color: var(--outline);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 14px;
-  font-weight: 700;
+.port-splash img {
+  object-fit: cover;
+  position: fixed;
+  z-index: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.35;
 }
-.portDate {
-  letter-spacing: 3px;
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--outline);
-  text-transform: uppercase;
-  padding-left: 10px;
+.port-splash .img-overlay {
+  /* background: rgb(2,0,36); */
+  background-image: var(--gradient-overlay);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
 }
-.right-wrapper {
-  background: var(--light);
-  z-index: 1;
-  width: 50vw;
-  padding: 0 30px 20px 0;
+.port-section {
+  /* padding: 20px 0 40px; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--outline);
+}
+.port-heading {
+  margin: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+.port-heading-container {
+  /* margin-top: 35vh; */
+}
+.port-heading-content {
+  justify-self: center;
 }
 .project-link_wrapper {
   display: flex;
@@ -452,6 +421,11 @@ export default {
   /* font-weight: 700; */
   transition: var(--transition-faster);
 }
+.web-project_link svg {
+  height: 18px;
+  fill: var(--text);
+  padding-left: 10px;
+}
 
 .web-project_link:hover {
   background: var(--off);
@@ -460,88 +434,132 @@ export default {
   transform: translate(3px, -3px);
   box-shadow: -3px 3px 0 var(--nav-item_shadow);
 }
-.port_descr {
-  width: 100%;
-}
-.gallery-wrapper {
-  /* display: flex; */
-  /* overflow: auto; */
-  padding: 0px 30px;
-  height: 100%;
-  background: var(--off);
-  padding: 130px 20px;
-}
-.flex-scroll {
-  padding: 30px 20px 20px;
-  height: 30vh;
+.port-content-details {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 10px 0px;
+  margin: 60px 0 40px;
+  border: 2px solid var(--heavy-op);
+  background: var(--menuBack);
 }
-.gallery-img img {
-  padding: 5px;
+.port-content-details p {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.port-heading h1 {
+  font-size: 3rem;
+}
+.hash-line {
+  width: 200px;
+  height: 2px;
+  background: var(--heavy-op);
+  margin: 15px 0 25px;
+}
+.port-content {
+  margin: 0px 0 0;
+  padding: 0 40px;
+  background: var(--menuBack);
+}
+.port-content img {
+  object-position: center top;
+  object-fit: cover;
+  max-width: 800px;
+}
+button.scrollUp.bounce {
+  bottom: 50px;
+}
+.port-section-content {
+  display: flex;
+  flex-direction: row;
+  margin: 40px 0 0;
+}
+.port-section-content h2 {
+  margin-right: 60px;
+  min-width: 250px;
+}
+.port-content iframe {
+  max-width: 800px;
+  min-height: 500px;
+}
+.port-content img,
+.port-content iframe {
+  width: 100%;
+  border: 2px solid var(--heavy-op);
+  box-shadow: 0 10px 10px var(--off);
 }
 
-.det-wrapper video {
-  width: 40vw;
+.col-3 {
+  width: 30%;
+  padding-right: 10px;
+  text-align: center;
 }
-.landscape {
-  width: 40vw;
+.scroll-buttons {
+  margin: 20px 0;
+  display: flex;
+  width: 140px;
+  justify-content: space-between;
 }
-.portrait {
-  width: 13vw;
+.port-det-back {
+  justify-content: flex-end;
+  padding-top: 30px;
 }
-.square {
-  width: 40vw;
+.section-img p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--heavy-op)
 }
-.rect {
-  width: 70vw;
-}
-.expand {
-  transition: var(--transition-faster);
-  position: absolute;
-  display: none;
-  font-size: 1.5rem;
-  color: var(--text);
-  border: 2px solid var(--heavy);
-  background: var(--light);
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
+/* media queries */
 @media (max-width: 960px) {
   .port-wrapper {
     margin: 0;
   }
-  .det-splash {
-    left: 0;
-    right: 0;
+  .port-det-back {
+    margin: 0 60px 20px 0;
+    padding-top: 20px;
+  }
+  .port-section-content p {
+    margin-right: 60px;
+  }
+  .port-section-content h2 {
+    margin-right: 0px;
   }
 }
-@media (max-width: 600px) {
-  .det-header {
-    margin-top: 50vh;
+@media (max-width: 740px) {
+  .port-section-content {
+    flex-direction: column;
   }
-  .det-wrapper {
-    flex-direction: column-reverse;
-    justify-content: flex-end;
+
+  .port-heading-container {
+    /* margin-top: 10vh; */
   }
-  .right-wrapper {
-    width: 100vw;
-    align-self: center;
+  .port-content-details {
+    flex-direction: column;
+    padding: 5px 20px;
+    margin: 40px 0;
   }
-  .gallery-wrapper {
-    width: 100vw;
-    padding: 30px 20px;
+  .port-content-details .col-3 {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--outline);
+    padding: 10px 0 0;
   }
-  .landscape,
-  .square,
-  .rect {
-    width: 85vw;
+  .port-content-details .col-3_last {
+    border: none;
   }
-  .portrait {
-    width: 30vw;
+  .port-content-details h6 {
+    padding-right: 10px;
+    text-align: left;
+    line-height: 1.25rem;
+  }
+  .port-content-details p {
+    text-align: right;
+    line-height: 1.25rem;
   }
 }
 </style>

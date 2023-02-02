@@ -4,8 +4,8 @@
       <TheCard
         :name="`${item.lvl} lvl`"
         :title="item.title"
-        :imgUrl="item.img"
-        :vidUrl="item.vid"
+        :imgUrl="item.splashImg"
+        :vidUrl="item.splashVid"
         :link="`/portfolio/${item.alias}`"
       >
         <template v-slot:body>
@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import items from "@/data/data.js";
+import items from "@/data/data2.js";
 
 import TheCard from "@/components/UI/TheCard";
 
@@ -71,7 +71,7 @@ export default {
           itemsToShow: 3,
         },
         1040: {
-          itemsToShow: 4,
+          itemsToShow: 3,
         },
         1440: {
           itemsToShow: 4,

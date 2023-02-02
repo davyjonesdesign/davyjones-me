@@ -4,7 +4,11 @@
     :to="{ name: 'PortDetails', params: { alias: port.alias } }"
   >
     <div class="portCard_top">
-      <img v-if="port.img" :src="port.img" v-bind:alt="port.title" />
+      <img
+        v-if="port.splashImg"
+        :src="port.splashImg"
+        v-bind:alt="port.splashImg"
+      />
       <video
         v-if="port.vid"
         autoplay

@@ -75,6 +75,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/DesignSystem.vue"),
   },
+  {
+    path: "/port-details-x",
+    name: "PortDetailsX",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/PortDetailsX.vue"),
+  },
 ];
 
 const router = createRouter({

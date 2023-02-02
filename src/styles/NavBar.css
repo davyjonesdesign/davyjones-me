@@ -30,7 +30,7 @@
   opacity: 0;
   transition: var(--transition);
   overflow: hidden;
-  font-weight: 600;
+  font-weight: 500;
 }
 .link-btn {
   display: flex;
@@ -87,7 +87,7 @@
   border-color: var(--heavy);
 }
 .link_focused,.router-link-exact-active .nav-link_text {
-  height: 40%;
+  /* height: 40%; */
   opacity: 1;
   /* padding-top: 5px; */
 }

@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.97058 20">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.97058 20" fill="black">
     <g id="a" />
     <g id="b">
       <g id="c">
@@ -11,3 +11,8 @@
     </g>
   </svg>
 </template>
+<script>
+export default {
+  name: "ArrowIcon",
+}
+</script>

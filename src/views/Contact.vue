@@ -42,11 +42,11 @@ export default {
   -ms-overflow-style: none;
   scrollbar-width: none;
   margin: 0 20px 0 100px;
-  padding: 20px 0;
+  padding: 20px 10px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
 }
 .form-container {

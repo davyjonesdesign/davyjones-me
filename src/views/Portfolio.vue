@@ -51,7 +51,7 @@
 import PortCard from "@/components/PortCard.vue";
 import Foot from "@/components/Footer.vue";
 // import { ref } from "@vue/runtime-core";
-import data from "../data/data";
+import data2 from "../data/data2";
 import Multiselect from "@vueform/multiselect";
 import BackButton from "@/components/BackButton.vue";
 
@@ -66,7 +66,7 @@ export default {
   data() {
     return {
       value: [],
-      filteredPorts: data,
+      filteredPorts: data2,
       options: [
         {
           value: "branding",
@@ -123,12 +123,12 @@ export default {
   },
   methods: {
     addTag() {
-      this.filteredPorts = data;
+      this.filteredPorts = data2;
       let filterPortsByFilters = [];
       this.options.push();
       this.value.push();
       if (this.value === null && this.value) {
-        this.filteredPorts = data;
+        this.filteredPorts = data2;
       } else {
         filterPortsByFilters = this.filteredPorts.filter((obj) =>
           this.value.every((val) => obj.tag.indexOf(val) >= 0)
@@ -151,7 +151,7 @@ export default {
 
     // },
     getFiltered() {
-      this.filteredPorts = data;
+      this.filteredPorts = data2;
     },
     mounted() {
       this.getFiltered();

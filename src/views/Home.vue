@@ -22,9 +22,22 @@
       </p>
 
       <PortCarousel />
-      <router-link class="link link-btn splash-btn" to="/portfolio">
-        <div class="nav-link_text">See my work</div>
-      </router-link>
+      <div class="section-buttons">
+        <button class="scrollDown bounce" @click="scrollToElement('#about')">
+          <svg
+            id="a"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 23.17157 13.94712"
+          >
+            <path
+              d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+            />
+          </svg>
+        </button>
+        <router-link class="link link-btn splash-btn" to="/portfolio">
+          <div class="nav-link_text">See my work</div>
+        </router-link>
+      </div>
     </div>
     <div class="about-home" id="about">
       <intersection-observer
@@ -42,9 +55,22 @@
         </div>
         <ToolBox />
       </div>
-      <router-link class="link link-btn splash-btn" to="/about">
-        <div class="nav-link_text">Learn about me</div>
-      </router-link>
+      <div class="section-buttons">
+        <button class="scrollDown bounce" @click="scrollToElement('#foot')">
+          <svg
+            id="a"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 23.17157 13.94712"
+          >
+            <path
+              d="M3.11289,13.655L11.58579,5.20057l8.47289,8.45443c.39065,.3898,1.02322,.38945,1.41344-.00077l1.40656-1.40656c.39052-.39052,.39052-1.02369,0-1.41421L12.37009,.32487c-.43316-.43316-1.13545-.43316-1.56861,0L.29289,10.83346c-.39052,.39052-.39052,1.02369,0,1.41421l1.40656,1.40656c.39022,.39022,1.02279,.39057,1.41344,.00077Z"
+            />
+          </svg>
+        </button>
+        <router-link class="link link-btn splash-btn" to="/about">
+          <div class="nav-link_text">Learn about me</div>
+        </router-link>
+      </div>
     </div>
     <div class="footer">
       <Foot id="foot" />
@@ -194,6 +220,9 @@ export default {
 #foot {
   height: 99vh;
 }
+.splash-home {
+  height: 100vh;
+}
 .bot-sp {
   height: 1vh;
   background: var(--menuBack);
@@ -211,12 +240,11 @@ export default {
 }
 .port-container_home {
   margin: 0px 40px 0 120px;
-  /* padding: 60px 0 0 ; */
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 .about-home {
   margin: 0px 40px 0 120px;
@@ -224,7 +252,7 @@ export default {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
 }
 .carousel__slide:hover {
   transition: var(--transition);
@@ -266,6 +294,14 @@ export default {
 }
 .about-dets p {
   margin-right: 20px;
+}
+.section-buttons {
+  display: flex;
+  align-items: flex-end;
+  margin: 15px 0 25px;
+}
+.section-buttons a {
+  margin: 0 20px;
 }
 @media (max-width: 960px) {
   .scrollers a {
