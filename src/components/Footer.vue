@@ -235,13 +235,21 @@ export default {
   .footer-splash {
     flex-direction: column;
     justify-content: center;
+    width: 100%;
   }
   .footer-msg {
     margin-left: 0;
     text-align: center;
+    width: 100%;
   }
   button.scrollUp.bounce {
     top: 0px;
+  }
+  .footer-btn {
+    /* padding: 25px 20px; */
+    min-width: 100%;
+    width: 100%;
+    margin: 20px 0 0;
   }
 }
 

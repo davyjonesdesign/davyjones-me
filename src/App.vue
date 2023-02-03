@@ -353,12 +353,14 @@ ul.sidebar-panel-nav > li > a {
 }
 
 .splash-btn {
-  min-width: 250px;
+  width: 300px;
+  /* width: 100%; */
   background: var(--light);
   color: var(--light);
   border: 2px solid var(--heavy);
   margin: 20px 0 0;
   height: 60px;
+  padding: 0 20px
 }
 
 .splash-btn .nav-link_text {
