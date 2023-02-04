@@ -8,6 +8,7 @@ button.scrollDown.bounce {
   font-weight: 600;
   font-size: 1rem;
   z-index: 100;
+  min-width: 60px;
   width: 60px;
   min-height: 60px;
 }

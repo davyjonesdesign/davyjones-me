@@ -2,7 +2,7 @@
   <div class="splash-content">
     <div class="home-text">
       <h2>
-        Hi, I'm Davy Jones
+        Hi!<br> I'm Davy Jones,<br> a UX/UI Designer & Developer
         <!-- <span class="char-hover">H</span><span class="char-hover">i</span>,
         <span class="char-hover">I</span><span class="char-hover">'</span
         ><span class="char-hover">m</span> <span class="char-hover">D</span
@@ -12,8 +12,9 @@
         ><span class="char-hover">e</span><span class="char-hover">s</span> -->
       </h2>
       <h3>
-        I am a graphic and web designer with experience executing complex user
-        interfaces.
+        Discover my passion for design, development, and problem solving as you
+        explore my portfolio and past projects. Get in touch to learn more about
+        my skills and how I can help bring your ideas to life.
       </h3>
       <div class="splash-btns">
         <router-link class="link link-btn splash-btn" to="/portfolio">
@@ -65,15 +66,19 @@ export default {
 .splash-content {
   display: flex;
   flex-direction: column;
-  margin: 27vh 40px 40px 140px;
-  height: 70vh;
+  margin: 0 100px 0 120px;
+  height: 100vh;
   justify-content: space-between;
+}
+.splash-content button {
+  margin: 0 0 20px;
 }
 .home-text {
   text-align: left;
   line-height: 1;
   max-width: 960px;
   display: flex;
+  margin: 40px 0 0;
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: center;
@@ -83,16 +88,17 @@ export default {
   color: var(--heavy);
 }
 .home-text h2 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   letter-spacing: 1px;
   font-weight: 900;
   text-transform: none;
+  line-height: 4rem;
 }
 .home-text h3 {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: 2rem;
+  line-height: 3rem;
   letter-spacing: 1px;
-  margin: 20px 0 40px;
+  margin: 20px 0 20px;
   font-weight: 600;
   text-transform: none;
 }
@@ -117,7 +123,7 @@ export default {
 @media (max-width: 960px) {
   .splash-content {
     /* margin: 30vh 40px 40px 140px; */
-    margin: 25vh 60px 40px 35px;
+    margin: 0 60px 0 35px;
   }
   .home-text h2 {
     font-size: 2.5rem;
@@ -125,7 +131,7 @@ export default {
   }
   .home-text h3 {
     font-size: 1.5rem;
-    margin: 15px 0 30px;
+    margin: 15px 0 15px;
     line-height: 2rem;
   }
   th {
@@ -138,17 +144,27 @@ export default {
 }
 @media (max-width: 640px) {
   .home-text {
-    margin: 0 0px 40px;
+    margin: 40px 0px;
+  }
+  .home-text h2 {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+
+  }
+  .home-text h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+
   }
 }
 @media (max-width: 400px) {
   .home-text h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   .home-text h3 {
-    font-size: 1.25rem;
-    line-height: 2rem;
-    margin: 10px 0 30px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    /* margin: 10px 0 30px; */
   }
   thead th {
     font-size: 18px;

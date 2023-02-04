@@ -96,6 +96,9 @@ export default {
   .portCard_content {
     min-height: 50px;
   }
+  .portCard {
+    min-height: 480px;
+  }
   .portCard_top video,
   .portCard_top img {
     height: 25vh;

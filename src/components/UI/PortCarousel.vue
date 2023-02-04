@@ -64,7 +64,7 @@ export default {
         350: {
           itemsToShow: 1,
         },
-        400: {
+        600: {
           itemsToShow: 2,
         },
         760: {
@@ -89,20 +89,25 @@ export default {
   flex-wrap: wrap;
 }
 .portCard_tagSpan {
-  background: var(--off);
-  border: 1px solid var(--text);
+  background: var(--light-op);
+  /* border: 1px solid var(--off); */
   color: var(--text);
-  padding: 0px 10px 1px;
+  padding: 0px 8px 0px;
   margin: 0 5px 5px 0;
   font-weight: 400;
   font-size: 14px;
   border-radius: 5px;
   text-transform: lowercase;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
 }
 @media (max-height: 450px) {
   .portCard_tags {
     display: none;
+  }
+}
+@media (max-width: 600px) {
+  .portCard_tagSpan {
+    /* padding: 0 4px 1px; */
   }
 }
 </style>

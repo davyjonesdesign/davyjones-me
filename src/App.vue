@@ -360,7 +360,7 @@ ul.sidebar-panel-nav > li > a {
   border: 2px solid var(--heavy);
   margin: 20px 0 0;
   height: 60px;
-  padding: 0 20px
+  padding: 0 20px;
 }
 
 .splash-btn .nav-link_text {

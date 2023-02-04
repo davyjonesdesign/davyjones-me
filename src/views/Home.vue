@@ -15,7 +15,7 @@
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement1"
       ></intersection-observer>
-      <h1>My Work</h1>
+      <h2>My Work</h2>
       <p>
         I've worked on many projects from branding, print, UX/UI Design, web
         development, motion graphics, video, and more.
@@ -44,7 +44,7 @@
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement2"
       ></intersection-observer>
-      <h1>About me</h1>
+      <h2>About me</h2>
 
       <div class="about-dets">
         <div class="about-dets_content">
@@ -239,12 +239,15 @@ export default {
   scrollbar-width: none; /* Firefox */
 }
 .port-container_home {
-  margin: 0px 40px 0 120px;
+  margin: 40px 0 120px;
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.port-container_home h2 {
+  padding: 30px 0 10px;
 }
 .about-home {
   margin: 0px 40px 0 120px;
