@@ -4,12 +4,12 @@
       <thead>
         <th colspan="4">My Toolbox</th>
       </thead>
-      <tr>
+      <!-- <tr>
         <th>graphic design</th>
         <th>web design</th>
         <th>web development</th>
         <th>video + motion graphics</th>
-      </tr>
+      </tr> -->
       <tr>
         <td class="tooltip" @click="aiClick()" :class="{ clicked: aiHid }">
           Illustrator<span class="tooltiptext" :class="{ visible: aiHid }"
@@ -551,13 +551,14 @@ table {
 .toolbox-wrapper {
   width: 100%;
   background: var(--menuBack);
-  border: 2px solid var(--outline);
+  border: 2px solid var(--light-op);
   border-radius: 5px;
-  padding: 0 0 20px;
+  padding: 0 0 10px;
+  max-width: 600px;
 }
 table {
-  border-spacing: 20px;
-  margin: 10px auto;
+  border-spacing: 5px;
+  margin: 5px auto;
 }
 
 th {
@@ -565,20 +566,20 @@ th {
   letter-spacing: 0px;
   font-weight: 500;
   font-style: italic;
-  padding: 7px 20px;
-  color: var(--heavy);
+  padding: 3px 10px;
+  color: var(--text);
 }
 thead th {
   text-align: center;
   border-radius: 0;
-  border-bottom: 4px solid var(--outline);
-  color: var(--heavy);
-  font-size: 1.25rem;
+  /* border-bottom: 2px solid var(--light-op); */
+  color: var(--heavy-op);
+  font-size: 1rem;
   text-transform: uppercase;
   font-style: normal;
   letter-spacing: 5px;
   font-weight: 900;
-  padding: 10px 0 15px;
+  padding: 5px 0 7px;
 }
 td,
 th {
@@ -590,10 +591,10 @@ th {
   width: 25%;
 }
 td {
-  padding: 10px 30px;
+  padding: 5px 5px;
   /* text-decoration: underline; */
   background: var(--light);
-  border: 2px solid var(--heavy);
+  border: 2px solid var(--light-op);
   transition: var(--transition-faster);
 }
 td:hover,
@@ -617,7 +618,7 @@ td:active {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  width: 200%;
+  width: 300%;
   background-color: var(--off);
   color: var(--text);
   text-align: center;
@@ -636,6 +637,7 @@ td:active {
 }
 .tooltip .left {
   left: calc(-200% - 5px);
+  width: 200%;
 }
 .tooltip .lift {
   top: calc(-250% - 5px);
@@ -675,23 +677,9 @@ td:active {
   box-shadow: -3px 3px var(--heavy);
   color: var(--text);
 }
-@media (max-width: 960px) {
-  td {
-    padding: 10px;
-  }
-  thead th {
-    margin: 5px auto;
-    padding: 5px 0;
-    border-bottom: 1px solid var(--outline);
-  }
-  .table-slim th {
-    text-align: center;
-  }
-}
-@media (max-width: 640px) {
+
+/* @media (max-width: 640px) {
   .table-wide {
-    /* overflow-x: auto; */
-    /* overflow-y: hidden; */
     display: none;
   }
   .table-slim {
@@ -715,7 +703,7 @@ td:active {
   td {
     padding: 5px;
   }
-}
+} */
 @media (max-height: 450px) {
   .table-wide {
     display: none;

@@ -10,18 +10,20 @@
 
     <!-- <ToolBox /> -->
 
-    <div class="port-container_home" id="work">
+    <div class="home-section" id="work">
       <intersection-observer
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement1"
       ></intersection-observer>
-      <h2>My Work</h2>
+      <div>
+        <h2>My Work</h2>
       <p>
         I've worked on many projects from branding, print, UX/UI Design, web
         development, motion graphics, video, and more.
       </p>
 
       <PortCarousel />
+      </div>
       <div class="section-buttons">
         <button class="scrollDown bounce" @click="scrollToElement('#about')">
           <svg
@@ -39,22 +41,20 @@
         </router-link>
       </div>
     </div>
-    <div class="about-home" id="about">
+    <div class="home-section" id="about">
       <intersection-observer
         sentinal-name="sentinal-name"
         @on-intersection-element="onIntersectionElement2"
       ></intersection-observer>
-      <h2>About me</h2>
-
-      <div class="about-dets">
-        <div class="about-dets_content">
-          <p>
-            I have been a Graphic and UX/UI Web Designer for 6 years while
-            freelancing and working towards a Master's.
-          </p>
-        </div>
+      <div>
+        <h2>About me</h2>
+        <p>
+          I have been a Graphic and UX/UI Web Designer for 6 years while
+          freelancing and working towards a Master's.
+        </p>
         <ToolBox />
       </div>
+      
       <div class="section-buttons">
         <button class="scrollDown bounce" @click="scrollToElement('#foot')">
           <svg
@@ -249,7 +249,7 @@ export default {
 .port-container_home h2 {
   padding: 30px 0 10px;
 }
-.about-home {
+.home-section {
   margin: 0px 40px 0 120px;
   scroll-snap-align: center;
   height: 100vh;
@@ -316,7 +316,7 @@ export default {
     flex-direction: column;
   }
   .port-container_home,
-  .about-home {
+  .home-section {
     margin: 0 50px 0 20px;
   }
 }
@@ -325,7 +325,7 @@ export default {
     display: none;
   }
   .port-container_home,
-  .about-home {
+  .home-section {
     margin: 0 20px 0 20px;
   }
 }

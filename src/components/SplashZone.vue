@@ -1,21 +1,20 @@
 <template>
   <div class="splash-content">
-    <div class="home-text">
-      <h2>
-        Hi!<br> I'm Davy Jones,<br> a UX/UI Designer & Developer
-        <!-- <span class="char-hover">H</span><span class="char-hover">i</span>,
-        <span class="char-hover">I</span><span class="char-hover">'</span
-        ><span class="char-hover">m</span> <span class="char-hover">D</span
-        ><span class="char-hover">a</span><span class="char-hover">v</span
-        ><span class="char-hover">y</span> <span class="char-hover">J</span
-        ><span class="char-hover">o</span><span class="char-hover">n</span
-        ><span class="char-hover">e</span><span class="char-hover">s</span> -->
-      </h2>
-      <h3>
-        Discover my passion for design, development, and problem solving as you
-        explore my portfolio and past projects. Get in touch to learn more about
-        my skills and how I can help bring your ideas to life.
-      </h3>
+    <div class="splash-layout">
+      <div class="splash-intro">
+        <img
+          class="sticky"
+          src="@/assets/me.jpg"
+          alt="picture of me, Davy Jones"
+        />
+        <div class="home-text">
+          <h2>Hey there!</h2>
+          <h4>
+            My name is <strong>Davy Jones</strong> and I'm a UX/UI Designer with
+            6 years of experience in graphic and web design.
+          </h4>
+        </div>
+      </div>
       <div class="splash-btns">
         <router-link class="link link-btn splash-btn" to="/portfolio">
           <div class="nav-link_text">My Portfolio</div>
@@ -73,34 +72,56 @@ export default {
 .splash-content button {
   margin: 0 0 20px;
 }
+.splash-layout {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 0;
+  align-items: flex-start;
+  height: 100%;
+  justify-content: center;
+}
+.splash-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+
+}
+.splash-layout img {
+  max-width: 25vw;
+  max-height: 25vw;
+  min-width: 250px;
+  min-height: 250px;
+  object-fit: cover;
+  border-radius: 100%;
+  margin: 0 40px 0 0;
+}
 .home-text {
   text-align: left;
   line-height: 1;
   max-width: 960px;
   display: flex;
-  margin: 40px 0 0;
   flex-direction: column;
   justify-content: center;
   scroll-snap-align: center;
 }
 
-.light-theme .home-text h2 {
-  color: var(--heavy);
-}
 .home-text h2 {
   font-size: 3.5rem;
   letter-spacing: 1px;
   font-weight: 900;
   text-transform: none;
   line-height: 4rem;
+  border-bottom: 2px solid var(--outline);
+  padding-bottom: 25px;
+  color: var(--heavy)
 }
-.home-text h3 {
-  font-size: 2rem;
-  line-height: 3rem;
-  letter-spacing: 1px;
-  margin: 20px 0 20px;
+.home-text h4 {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  /* letter-spacing: 1px; */
   font-weight: 600;
-  text-transform: none;
+  color: var(--text);
 }
 .home-text p {
   margin-top: 20px;
@@ -116,21 +137,26 @@ export default {
 }
 
 .splash-btns {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  column-gap: 10px;
+  display: flex;
+  /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
+  column-gap: 20px;
 }
 @media (max-width: 960px) {
   .splash-content {
     /* margin: 30vh 40px 40px 140px; */
     margin: 0 60px 0 35px;
   }
+  .splash-layout {
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    align-items: flex-start;
+  }
   .home-text h2 {
     font-size: 2.5rem;
     line-height: 3rem;
   }
-  .home-text h3 {
-    font-size: 1.5rem;
+  .home-text h4 {
+    font-size: 1rem;
     margin: 15px 0 15px;
     line-height: 2rem;
   }
@@ -143,18 +169,33 @@ export default {
   }
 }
 @media (max-width: 640px) {
-  .home-text {
-    margin: 40px 0px;
+  .home-text h2 {
+    text-align: center;
+    margin: 30px 0 0;
   }
+  .home-text h4 {
+    text-align: center;
+    margin: 30px 0 0;
+  }
+  .splash-intro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .splash-layout img  {
+    margin: 0;
+  }
+
   .home-text h2 {
     font-size: 2.25rem;
     line-height: 2.5rem;
-
   }
   .home-text h3 {
     font-size: 1.25rem;
     line-height: 1.75rem;
-
+  }
+  .splash-btns {
+    flex-direction: column;
+    width: 100%;
   }
 }
 @media (max-width: 400px) {

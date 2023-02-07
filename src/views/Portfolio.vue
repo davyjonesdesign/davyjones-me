@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="myWork-wrapper">
+    <div class="page-wrapper">
       <!-- <input v-model="checkedTags" type="text" placeholder="search portfolio"/> -->
 
-      <div class="header-block" id="top">
+      <div class="page-header" id="top">
         <h1>Portfolio</h1>
         <BackButton />
       </div>
@@ -167,6 +167,7 @@ export default {
 <style src="@vueform/multiselect/themes/default.css"></style>
 
 <style scoped>
+@import "../styles/PageStyles.css";
 .multiselect {
   font-family: "Lato", sans-serif;
   color: var(--text);
@@ -224,43 +225,9 @@ export default {
   border-color: green;
 } */
 
-.myWork-wrapper {
-  margin: 0 20px 0 100px;
-  padding: 0px 10px 20px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  justify-content: center;
-}
 
-.header-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 20px;
-}
-@media (max-width: 960px) {
-  .header-block {
-    padding-top: 75px;
-  }
-  .myWork-wrapper {
-    margin: 0 15px 0 10px;
-    /* padding: 80px 10px 20px; */
-  }
-  .header-block {
-    padding: 20px 60px 20px 0;
-    margin: 0 0 10px;
-  }
-  .header-block h1 {
-    margin: 0;
-  }
-}
-@media (max-width: 600px) {
-  .myWork-wrapper {
-    padding: 0 20px;
-    margin: 0;
-  }
-}
+
+
 .port-header {
   position: relative;
   display: flex;

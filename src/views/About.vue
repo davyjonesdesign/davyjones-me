@@ -1,24 +1,18 @@
 <template>
   <div>
     <!-- about me -->
-    <div class="about-wrapper">
-      <div class="about-section">
-        <div class="about-img" :class="{ hideAboutImg: isActive }">
-          <img
-            class="sticky"
-            src="@/assets/me.jpg"
-            alt="picture of me, Davy Jones"
-          />
+    <div class="page-wrapper">
+      <!-- <div class="about-img" :class="{ hideAboutImg: isActive }">
+          
           <div class="image-overlay"></div>
-        </div>
+        </div> -->
+      <div class="page-header">
+        <h1 id="top">About</h1>
+        <BackButton />
+      </div>
+      <div class="about-wrapper">
         <div class="about-content">
-          <div class="header-block">
-            <h1 id="top">About</h1>
-            <BackButton />
-          </div>
-          <div class="form-container">
-            <div class="about-container">
-              <div class="about-block">
+          <!-- <div class="about-block">
                 <h5>Background</h5>
 
                 <p>
@@ -79,11 +73,30 @@
                 possibilities. I love this journey that I am on, and I look
                 forward to continueing to practice design in a spirit of joy,
                 collaboration and excellence.
-              </p>
-              <ToolBox />
-            </div>
-          </div>
+              </p> -->
+          <p>
+            I'm Davy Jones, a UX/UI Designer with 6 years of experience in
+            graphic and web design. I bring a unique perspective to design,
+            valuing collaboration and mental flexibility, and strive to bring
+            joy and cohesiveness to projects.
+          </p>
+          <p>
+            As a student in the Masters of Graphic and Web Design program at
+            Minneapolis College of Art and Design, I stay current with industry
+            tools and techniques.
+          </p>
+          <p>
+            My expertise includes Illustrator, Sketch, Figma, HTML, CSS, and
+            Javascript. Let's bring your vision to life with fresh solutions and
+            a passion for design excellence.
+          </p>
+          <ToolBox />
         </div>
+        <img
+          class="sticky"
+          src="@/assets/me.jpg"
+          alt="picture of me, Davy Jones"
+        />
       </div>
     </div>
     <intersection-observer
@@ -124,98 +137,35 @@ export default {
 };
 </script>
 <style scoped>
-/* About Section */
+@import "../styles/PageStyles.css";
+
 .about-wrapper {
-  /* margin: 0 auto; */
-  /* padding: 20px 10px; */
-  /* margin: 60px 0; */
-  width: 80vw;
-  overflow: hidden;
-}
-.about-section {
   display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  margin: 0 auto;
-  border-radius: 8px;
-}
-.about-content {
-  margin: 0px 40px 20px 120px;
-}
-.form-container {
-  /* width: 100%; */
-  /* height: calc(100% - 30px); */
-  /* overflow-y: scroll; */
-  /* margin-right: 30px; */
-  padding: 30px 45px;
-  background: var(--light);
-  border-radius: var(--border-radius);
-  /* box-shadow: 3px 3px 0 var(--heavy-op); */
-  /* border: 1px solid var(--outline); */
-  /* height: 50vh; */
-}
-.about-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
-.about-block {
-  width: 48%;
-  margin-bottom: 20px;
-}
-.about-block h5 {
-  font-weight: 600;
-  padding: 15px 0 0;
-}
-.about-content {
-  /* padding: 20px 0 0; */
-  /* width: 50%; */
-  padding-top: 20px;
-}
-.about-img {
-  position: fixed;
-  right: 0px;
-  top: 0;
-  justify-self: flex-end;
-  width: 19vw;
-  height: 100vh;
-  opacity: 1;
-  transition: var(--transition);
-}
-.about-img img {
-  /* min-width: 50%; */
-  /* width: 100%; */
-  /* margin: -30px 0; */
-  height: 100%;
-  width: 100%;
-  align-self: flex-end;
-  /* border-radius: 0 10px 10px 0; */
+.about-wrapper img {
+  border-radius: 100%;
+  max-width: 25vw;
+  max-height: 25vw;
   object-fit: cover;
+  margin: 40px 20px;
 }
-.hideAboutImg {
-  opacity: 0;
+.about-content {
+  margin: 0 0 20px;
 }
-.header-block {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-.remove-marg {
-  margin: 0;
-}
+
 @media (max-width: 960px) {
-  .about-content {
-    margin: 20px;
-    width: 100%;
-    padding-top: 0;
-  }
-  .form-container {
-    margin: 0px 0px 20px;
-    padding: 20px 30px;
+  .about-wrapper img {
+    max-width: 200px;
+    max-height: 200px;
   }
 }
-@media (max-width: 740px) {
+@media (max-width: 640px) {
+  .about-wrapper img {
+    display: none;
+  }
+}
+/* @media (max-width: 740px) {
   .about-block {
     width: 100%;
     margin-bottom: 0px;
@@ -249,9 +199,7 @@ export default {
     padding: 0px 20px 20px;
   }
   .about-img {
-    /* position: relative; */
     width: 100vw;
-    /* margin-top: 70px; */
     height: 40vh;
   }
   .image-overlay {
@@ -260,6 +208,6 @@ export default {
     height: 200px;
     position: fixed;
     top: 0;
-  }
-}
+  } 
+}*/
 </style>

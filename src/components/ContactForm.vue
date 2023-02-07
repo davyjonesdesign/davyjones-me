@@ -144,6 +144,7 @@ form {
   flex-direction: column;
   color: var(--text);
   /* margin: 30px 20px; */
+  margin-bottom: 20px;
 }
 .field {
   display: flex;
