@@ -85,13 +85,10 @@ export default {
   align-items: center;
   justify-content: center;
   margin: 20px 0;
-
 }
 .splash-layout img {
   max-width: 25vw;
   max-height: 25vw;
-  min-width: 250px;
-  min-height: 250px;
   object-fit: cover;
   border-radius: 100%;
   margin: 0 40px 0 0;
@@ -114,7 +111,7 @@ export default {
   line-height: 4rem;
   border-bottom: 2px solid var(--outline);
   padding-bottom: 25px;
-  color: var(--heavy)
+  color: var(--heavy);
 }
 .home-text h4 {
   font-size: 1.5rem;
@@ -144,7 +141,7 @@ export default {
 @media (max-width: 960px) {
   .splash-content {
     /* margin: 30vh 40px 40px 140px; */
-    margin: 0 60px 0 35px;
+    margin: 0 40px 0 20px;
   }
   .splash-layout {
     flex-direction: column;
@@ -171,31 +168,44 @@ export default {
 @media (max-width: 640px) {
   .home-text h2 {
     text-align: center;
-    margin: 30px 0 0;
+    margin: 20px 0 0;
   }
   .home-text h4 {
     text-align: center;
-    margin: 30px 0 0;
+    margin: 20px 0 0;
   }
   .splash-intro {
     flex-direction: column;
     align-items: center;
   }
-  .splash-layout img  {
+  .splash-content {
+    /* margin: 30vh 40px 40px 140px; */
+    margin: 0 20px 0 20px;
+  }
+  .splash-layout {
+    margin: 20px 0 0;
+  }
+  .splash-layout img {
     margin: 0;
+    max-width: 50vw;
+    max-height: 50vw;
   }
 
   .home-text h2 {
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
-  .home-text h3 {
-    font-size: 1.25rem;
+  .home-text h4 {
+    font-size: 1rem;
     line-height: 1.75rem;
   }
   .splash-btns {
     flex-direction: column;
     width: 100%;
+    margin: 0;
+  }
+  .splash-btns .splash-btn {
+    margin: 0 0 10px;
   }
 }
 @media (max-width: 400px) {

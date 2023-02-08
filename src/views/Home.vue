@@ -17,12 +17,12 @@
       ></intersection-observer>
       <div>
         <h2>My Work</h2>
-      <p>
-        I've worked on many projects from branding, print, UX/UI Design, web
-        development, motion graphics, video, and more.
-      </p>
+        <p>
+          I've worked on many projects from branding, print, UX/UI Design, web
+          development, motion graphics, video, and more.
+        </p>
 
-      <PortCarousel />
+        <PortCarousel />
       </div>
       <div class="section-buttons">
         <button class="scrollDown bounce" @click="scrollToElement('#about')">
@@ -54,7 +54,7 @@
         </p>
         <ToolBox />
       </div>
-      
+
       <div class="section-buttons">
         <button class="scrollDown bounce" @click="scrollToElement('#foot')">
           <svg
@@ -237,6 +237,7 @@ export default {
   scroll-snap-type: y mandatory;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  overflow-x: hidden;
 }
 .port-container_home {
   margin: 40px 0 120px;
