@@ -18,8 +18,8 @@
       <div>
         <h2>My Work</h2>
         <p>
-          I've worked on many projects from branding, print, UX/UI Design, web
-          development, motion graphics, video, and more.
+          I have enjoyed the opportunity to work on a variety of projects in the
+          design space. Please check out some of my portfolio pieces below!
         </p>
 
         <PortCarousel />
@@ -49,8 +49,9 @@
       <div>
         <h2>About me</h2>
         <p>
-          I have been a Graphic and UX/UI Web Designer for 6 years while
-          freelancing and working towards a Master's.
+          I am a UX/UI Designer, Graphic Designer, Motion Designer, and Web
+          Developer with a passion for creating impactful designs. Below is a
+          quick look at some of my skills.
         </p>
         <ToolBox />
       </div>

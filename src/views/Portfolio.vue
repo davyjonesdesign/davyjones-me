@@ -8,10 +8,11 @@
         <BackButton />
       </div>
       <p>
-        I'm not a believer in the old adage that you are only as good as your
-        weakest portfolio piece. I've included the projects I've enjoyed working
-        on and that I feel turned out well. Some may be 'stronger' than others,
-        but I believe transparency far outweighs persona.
+        My portfolio showcases my expertise in UX/UI/Web Design and Development,
+        Graphic Design, and Video/Motion Design. I strive for collaboration and
+        transparency in every project and am committed to delivering thoughtful
+        and intuitive experiences. Come take a look and see how I bring your
+        vision to life.
       </p>
       <div>
         <Multiselect
@@ -224,9 +225,6 @@ export default {
 /* input:focus:checked + label {
   border-color: green;
 } */
-
-
-
 
 .port-header {
   position: relative;
