@@ -85,7 +85,7 @@ const data2 = [
   },
   {
     alias: "airbnb",
-    title: "Airbnb Redesign",
+    title: "Airbnb",
     subtitle: "Bible Study Web App Designed and Developed with Vue Framework",
     role: "Solo Brand/UX/UI Designer and Developer",
     targAud: "Older women in their sixties",
@@ -249,35 +249,35 @@ const data2 = [
     title: "Caps",
     subtitle: "The Trusted Mushroom Magazine",
     role: "Lead Designer",
-    targAud: "People in who Forage",
+    targAud: "People who are into Foraging",
     duration: "Winter 2022",
     tag: ["branding", "typography", "digital illustration", "print"],
     splashImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--snapback.jpg",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/caps-magazine/magazine-mockup.jpg",
     ovCont: [
-      "In 2020, STEM Search Group was looking to break open into the STEM jobsearch and recruiting market. I was hired by their web developer to develop a brand for them that would help them do this.",
+      "For my final project in a Master's Typography course, I was tasked with designing a magazine from scratch.",
     ],
     ovProto:
       "https://indd.adobe.com/embed/85283b4a-ccfd-4901-81c5-e139d23fa37f?startpage=1&allowFullscreen=true",
-    ovImgDes: "STEM - Logo",
+    ovImgDes: "Caps Mushroom Magazine - Digital Version",
     goalCont: [
-      "The goal of this project was to develop a brand for a recruiting firm that would establish them as a leader in the STEM market.",
+      "The goal of this project was to design a premium, earthy and vintage magazine featuring all things mushrooms to be published on a quarterly basis for amatuer to seasoned mushroom enthusiasts in all parts of the US.",
     ],
     goalImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--facebookpage.jpg",
-    goalImgDes: "STEM - Facebook Mockup",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/caps-magazine/magazine-styleguide.jpg",
+    goalImgDes: "Caps Mushroom Magazine - Style Guide",
     approachCont: [
-      "After meeting with leadership and gathering intel on their market and postion, I set out to design a brand that was future-oriented, engaging, and set them ahead of the pack.",
+      "I started by creating a moodboard where I compiled a few visual and contextual touchpoints I wanted to keep in scope. After iterating out a masthead, I then began developing the front cover, table of contents, centerspread, and style guide.",
     ],
     approachImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--linkedinpage.jpg",
-    approachImgDes: "STEM — Linkedin Page",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/caps-magazine/magazine-moodboard.png",
+    approachImgDes: "Caps Mushroom Magazine - Moodboard",
     ocCont: [
-      "The final brand and brand assets were well-recieved by STEM's leadership. After launching, they saw a massive growth and continue to be a major leader in their region as the leading recruiting firm.",
+      "After many round of peer reviews, I finalized all assets and mocked up a printed version. The magazine brand and layout exceeded expections, meeting my initial desires for the magazine to feel natural, earthy and whimsical with a flavor of vintage.",
     ],
     ocImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--shirt.jpg",
-    ocImgDes: "STEM - Shirt Mockup",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/caps-magazine/magazine-centerspread.jpg",
+    ocImgDes: "Caps Mushroom Magazine - Centerspread",
   },
 ];
 
