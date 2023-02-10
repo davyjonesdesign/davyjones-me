@@ -390,9 +390,6 @@ export default {
   justify-content: space-between;
   height: 100vh;
 }
-.port-heading-container {
-  /* margin-top: 35vh; */
-}
 .port-heading-content {
   justify-self: center;
 }
@@ -505,12 +502,13 @@ button.scrollUp.bounce {
   padding-top: 30px;
 }
 .section-img p {
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
-  font-size: .75rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--heavy-op)
+  color: var(--heavy-op);
+  max-width: 800px;
 }
 /* media queries */
 @media (max-width: 960px) {

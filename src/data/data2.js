@@ -99,11 +99,7 @@ const data2 = [
       {
         link: "https://www.figma.com/proto/74IM7vTuezwu4BEJlcWk3L/12.3-desktop-prototype?node-id=1%3A19&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A19&hide-ui=1",
         linkDescription: "Desktop Prototype",
-      },
-      {
-        link: "https://www.figma.com/proto/IcrbeoQpx5xN3oFAHnHQra/11.3-final-revisions-mobile?node-id=200%3A2525&scaling=contain&page-id=0%3A1&starting-point-node-id=200%3A2525&hide-ui=1",
-        linkDescription: "Mobile Prototype",
-      },
+      }
     ],
     splashImg:
       "https://davyjonesdesign.github.io/data-for-axios/assets/airbnb/airbnb-mockup.jpg",
@@ -145,7 +141,8 @@ const data2 = [
     subtitle:
       "A full rebrand and website redesign for an industrial cable manufacturing company",
     role: "Lead Brand & UX/UI Designer",
-    targAud: "Large Industrial Companies with a Need for Industrial Cable Assemblies and Extrusion",
+    targAud:
+      "Large Industrial Companies with a Need for Industrial Cable Assemblies and Extrusion",
     duration: "April 2019 - November 2019",
     tag: ["branding", "ux/ui design"],
     splashImg:
@@ -211,6 +208,76 @@ const data2 = [
     ocImg:
       "https://davyjonesdesign.github.io/data-for-axios/assets/cwi-web-mockups-assets/cwi-man-cap.jpg",
     ocImgDes: "CWI - Manufacturing Capabilities",
+  },
+  {
+    alias: "stem",
+    title: "STEM Search Group",
+    subtitle: "A branding project for for a recruiting firm",
+    role: "Lead Brand Designer",
+    targAud: "People in STEM Fields",
+    duration: "Summer 2020",
+    tag: ["branding"],
+    splashImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--snapback.jpg",
+    ovCont: [
+      "In 2020, STEM Search Group was looking to break open into the STEM jobsearch and recruiting market. I was hired by their web developer to develop a brand for them that would help them do this.",
+    ],
+    ovImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem-brand.jpg",
+    ovImgDes: "STEM - Logo",
+    goalCont: [
+      "The goal of this project was to develop a brand for a recruiting firm that would establish them as a leader in the STEM market.",
+    ],
+    goalImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--facebookpage.jpg",
+    goalImgDes: "STEM - Facebook Mockup",
+    approachCont: [
+      "After meeting with leadership and gathering intel on their market and postion, I set out to design a brand that was future-oriented, engaging, and set them ahead of the pack.",
+    ],
+    approachImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--linkedinpage.jpg",
+    approachImgDes: "STEM — Linkedin Page",
+    ocCont: [
+      "The final brand and brand assets were well-recieved by STEM's leadership. After launching, they saw a massive growth and continue to be a major leader in their region as the leading recruiting firm.",
+    ],
+    ocImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--shirt.jpg",
+    ocImgDes: "STEM - Shirt Mockup",
+  },
+  {
+    alias: "Caps",
+    title: "Caps",
+    subtitle: "The Trusted Mushroom Magazine",
+    role: "Lead Designer",
+    targAud: "People in who Forage",
+    duration: "Winter 2022",
+    tag: ["branding", "typography", "digital illustration", "print"],
+    splashImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--snapback.jpg",
+    ovCont: [
+      "In 2020, STEM Search Group was looking to break open into the STEM jobsearch and recruiting market. I was hired by their web developer to develop a brand for them that would help them do this.",
+    ],
+    ovProto:
+      "https://indd.adobe.com/embed/85283b4a-ccfd-4901-81c5-e139d23fa37f?startpage=1&allowFullscreen=true",
+    ovImgDes: "STEM - Logo",
+    goalCont: [
+      "The goal of this project was to develop a brand for a recruiting firm that would establish them as a leader in the STEM market.",
+    ],
+    goalImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--facebookpage.jpg",
+    goalImgDes: "STEM - Facebook Mockup",
+    approachCont: [
+      "After meeting with leadership and gathering intel on their market and postion, I set out to design a brand that was future-oriented, engaging, and set them ahead of the pack.",
+    ],
+    approachImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--linkedinpage.jpg",
+    approachImgDes: "STEM — Linkedin Page",
+    ocCont: [
+      "The final brand and brand assets were well-recieved by STEM's leadership. After launching, they saw a massive growth and continue to be a major leader in their region as the leading recruiting firm.",
+    ],
+    ocImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/stem/stem__mockup--shirt.jpg",
+    ocImgDes: "STEM - Shirt Mockup",
   },
 ];
 
