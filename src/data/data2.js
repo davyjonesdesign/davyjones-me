@@ -1,40 +1,109 @@
 /* eslint-disable no-unused-vars */
 const data2 = [
   {
-    alias: "forward",
-    title: "Forward Creative Agency",
+    alias: "streamline",
+    title: "Streamline",
     subtitle:
-      "A full brand and website design for an industrial marketing agency",
-    role: "Lead Brand & UX/UI Designer",
-    targAud: "Large Industrial Businesses",
-    duration: "April 2019 - April 2020",
-    tag: ["branding", "ux/ui design"],
-    splashImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/forward-splash.jpg",
-    ovCont: [
-      "Forward Marketing began with a redesign of its entire branding and website with the vision of becoming the next biggest marketing agency in the industrial market. I and two other members of our team embarked on a research journey to discover how we could best provide the appropriate solutions.",
+      "Video Streaming Platform that Consolidates Content from all other Streaming Apps",
+    role: "Solo Brand/UX/UI Designer",
+    targAud: "Anyone who uses video streaming apps",
+    duration: "January 2023 - May 2023",
+    tag: [
+      "branding",
+      "ux/ui design",
+      "figma",
+      "typography",
+      "user research",
+      "product design",
     ],
-    ovImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home_thumb.jpg",
-    ovImgDes: "Forward Home Page - Landing",
+    links: [
+      {
+        link: "https://www.figma.com/proto/5URMsR0axp6YLlhlDWs1OR/UX23-app-design_04-25?page-id=140%3A2090&type=design&node-id=277-9307&viewport=149%2C238%2C0.02&t=IXxZuPkYUEBst0FL-1&scaling=contain&starting-point-node-id=277%3A9307&mode=design",
+        linkDescription: "Streamline Project Presentation",
+      },
+      {
+        link: "https://www.figma.com/proto/5URMsR0axp6YLlhlDWs1OR/UX23-app-design_04-25?page-id=15%3A24&type=design&node-id=15-27&viewport=371%2C422%2C0.12&t=CUBxmzjErS8rANJQ-1&scaling=scale-down&starting-point-node-id=127%3A2287&mode=design",
+        linkDescription: "Streamline Prototype",
+      },
+    ],
+    splashImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/streamline/UX23-streamline-splash.png",
+    ovCont: [
+      "I find it hard to remember which apps have the content I want to watch, leading me to pay for movies that I already have access to on other platforms and I know at least 20 people who face the same problem. My idea was to create a new streaming platform that consolidates the content of all other streaming apps. With this, users can easily search and stream content from all synced apps in one place. The aim is to save users time by eliminating the need to switch between apps, making it easier to find and watch content.",
+    ],
+    ovProto:
+      "https://mega.nz/embed/z4BjDSLD#yRTNLpaXoSzr1T7_2NYmzfD1ig4FLa-nq08aWlRh_Do",
+    ovImgDes: "Streamline Streaming App UX Design Presentation",
     goalCont: [
-      "The goal of this particular project was to initiate a market-leading brand and website that would meet the growing need for marketing in the industrial space. All signs pointed to our need to create a brand and website that would point out our experiences and proven methods of increasing organic traffic.",
+      "The goal of this project was to allow insights into user behavior and preferences on video streaming apps to inform the design of a new app that consolidates multiple streaming services.",
     ],
     goalImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home.jpg",
-    goalImgDes: "Forward Home Page - What We Do",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/streamline/UX23-streamline-splash.png",
+    goalImgDes: "Streamline Splash Screen",
     approachCont: [
-      "We discovered that industrial companies are looking for companies to work with that are reputable, cost-effective, and fully invested in their interests. I hypothesized that if I could style our brand and web content that would speak directly to these felt needs, we would be able to hit the ground running.",
+      "I conducted a survey with 20 participants to understand their streaming app usage. User personas guided the design process, resulting in wireframes and a first prototype. Feedback led to a second prototype with improved UI.",
     ],
     approachImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-about.jpg",
-    approachImgDes: "Forward About Page - Meet the Crew",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/streamline/UX23-streamline-sketches.png",
+    approachImgDes: "Initial Streamline App Sketches",
     ocCont: [
-      " We developed a brand and website that was well-recieved by industrial business leaders and would have been a real contender in their market. Unofrtunately, due to COVID-19, the project was abandoned before we could launch. But I believe Forward would have been successful if it had not been for unforseen circumstances.",
+      "Future work may include research, focusing on a single scenario, and responsive design for larger screens. User testing will continue with a wider audience. Development process details were not provided.",
     ],
-    ocImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-blog-single.jpg",
-    ocImgDes: "Forward Blog Page - Single",
+    ocProto:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F5URMsR0axp6YLlhlDWs1OR%2FUX23-app-design_04-25%3Fpage-id%3D15%253A24%26type%3Ddesign%26node-id%3D15-27%26viewport%3D371%252C422%252C0.12%26t%3DCUBxmzjErS8rANJQ-1%26scaling%3Dcontain%26starting-point-node-id%3D127%253A2287%26mode%3Ddesign",
+    ocImgDes: "Prototype Iteration #2",
+  },
+  {
+    alias: "airbnb",
+    title: "Airbnb",
+    subtitle: "Bible Study Web App Designed and Developed with Vue Framework",
+    role: "Solo Brand/UX/UI Designer and Developer",
+    targAud: "Older women in their sixties",
+    duration: "August 2021 - December 2021",
+    tag: ["branding", "ux/ui design", "figma"],
+    links: [
+      {
+        link: "https://www.figma.com/proto/bLww2BBvNUsjAAZbIOgu4w/airbnb-redesign?node-id=317%3A1614&scaling=scale-down&page-id=0%3A1&starting-point-node-id=317%3A1614&hide-ui=1",
+        linkDescription: "Figma Design System",
+      },
+      {
+        link: "https://www.figma.com/proto/74IM7vTuezwu4BEJlcWk3L/12.3-desktop-prototype?node-id=1%3A19&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A19&hide-ui=1",
+        linkDescription: "Desktop Prototype",
+      }
+    ],
+    splashImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/airbnb/airbnb-mockup.jpg",
+    ovCont: [
+      "Airbnb is a well-known online marketplace that allows individuals to rent out their properties or spare rooms to travelers. The platform has primarily focused on a younger demographic, but there is an opportunity to expand its customer base by targeting older women in their sixties.",
+    ],
+    ovProto:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FbLww2BBvNUsjAAZbIOgu4w%2Fairbnb-redesign%3Fnode-id%3D317%253A1591%26starting-point-node-id%3D317%253A1591%26scaling%3Dscale-down-width",
+    ovImgDes: "Figma Airbnb Overview",
+    goalCont: [
+      "The goal of the redesign is to update Airbnb's UX/UI design to better cater to the needs and preferences of older women in their sixties, and to expand the company's customer base by attracting and retaining this demographic.",
+    ],
+    goalProto:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FpP3gPoziHkUfTXNzMu8Cmr%2F6.3-updated-brand-style-guide_v3%3Fnode-id%3D2%253A3%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A3",
+    goalImgDes: "Figma Airbnb Brand Style Guide",
+    approachCont: [
+      "To achieve the goal of the redesign, the approach was focused on prioritizing ease of use and accessibility. The design reflected a mature and sophisticated look and feel, using a color palette and typography that conveys comfort and reliability.",
+    ],
+    approachProto:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FbLww2BBvNUsjAAZbIOgu4w%2Fairbnb-redesign%3Fnode-id%3D317%253A1614%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D317%253A1614embed",
+    approachImgDes: "Figma Airbnb Design System",
+    keyfeatCont: [
+      "Large, easy-to-read text",
+      "Clean and simple layout",
+      "Clear calls to action",
+      "Detailed information about properties and their surroundings, including safety features and nearby amenities",
+      "Intuitive search function",
+    ],
+    ocCont: [
+      "The outcome of the UX/UI redesign for Airbnb is expected to be a welcoming and reliable experience for older women in their sixties, leading to an expansion of the company's customer base. By prioritizing ease of use, accessibility, and a mature and sophisticated look and feel, Airbnb will be well-positioned to attract and retain older women as customers.",
+    ],
+    ocProto:
+      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F74IM7vTuezwu4BEJlcWk3L%2F12.3-desktop-prototype%3Fnode-id%3D1%253A19%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A19",
+    ocImgDes: "Figma Airbnb Desktop Prototype",
   },
   {
     alias: "watermark",
@@ -84,56 +153,40 @@ const data2 = [
     ocImgDes: "Watermark Resources Page",
   },
   {
-    alias: "airbnb",
-    title: "Airbnb",
-    subtitle: "Bible Study Web App Designed and Developed with Vue Framework",
-    role: "Solo Brand/UX/UI Designer and Developer",
-    targAud: "Older women in their sixties",
-    duration: "August 2021 - December 2021",
-    tag: ["branding", "ux/ui design", "figma"],
-    links: [
-      {
-        link: "https://www.figma.com/proto/bLww2BBvNUsjAAZbIOgu4w/airbnb-redesign?node-id=317%3A1614&scaling=scale-down&page-id=0%3A1&starting-point-node-id=317%3A1614&hide-ui=1",
-        linkDescription: "Figma Design System",
-      },
-      {
-        link: "https://www.figma.com/proto/74IM7vTuezwu4BEJlcWk3L/12.3-desktop-prototype?node-id=1%3A19&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A19&hide-ui=1",
-        linkDescription: "Desktop Prototype",
-      }
-    ],
+    alias: "forward",
+    title: "Forward Creative Agency",
+    subtitle:
+      "A full brand and website design for an industrial marketing agency",
+    role: "Lead Brand & UX/UI Designer",
+    targAud: "Large Industrial Businesses",
+    duration: "April 2019 - April 2020",
+    tag: ["branding", "ux/ui design"],
     splashImg:
-      "https://davyjonesdesign.github.io/data-for-axios/assets/airbnb/airbnb-mockup.jpg",
+      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/forward-splash.jpg",
     ovCont: [
-      "Airbnb is a well-known online marketplace that allows individuals to rent out their properties or spare rooms to travelers. The platform has primarily focused on a younger demographic, but there is an opportunity to expand its customer base by targeting older women in their sixties.",
+      "Forward Marketing began with a redesign of its entire branding and website with the vision of becoming the next biggest marketing agency in the industrial market. I and two other members of our team embarked on a research journey to discover how we could best provide the appropriate solutions.",
     ],
-    ovProto:
-      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FbLww2BBvNUsjAAZbIOgu4w%2Fairbnb-redesign%3Fnode-id%3D317%253A1591%26starting-point-node-id%3D317%253A1591%26scaling%3Dscale-down-width",
-    ovImgDes: "Figma Airbnb Overview",
+    ovImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home_thumb.jpg",
+    ovImgDes: "Forward Home Page - Landing",
     goalCont: [
-      "The goal of the redesign is to update Airbnb's UX/UI design to better cater to the needs and preferences of older women in their sixties, and to expand the company's customer base by attracting and retaining this demographic.",
+      "The goal of this particular project was to initiate a market-leading brand and website that would meet the growing need for marketing in the industrial space. All signs pointed to our need to create a brand and website that would point out our experiences and proven methods of increasing organic traffic.",
     ],
-    goalProto:
-      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FpP3gPoziHkUfTXNzMu8Cmr%2F6.3-updated-brand-style-guide_v3%3Fnode-id%3D2%253A3%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D2%253A3",
-    goalImgDes: "Figma Airbnb Brand Style Guide",
+    goalImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-home.jpg",
+    goalImgDes: "Forward Home Page - What We Do",
     approachCont: [
-      "To achieve the goal of the redesign, the approach was focused on prioritizing ease of use and accessibility. The design reflected a mature and sophisticated look and feel, using a color palette and typography that conveys comfort and reliability.",
+      "We discovered that industrial companies are looking for companies to work with that are reputable, cost-effective, and fully invested in their interests. I hypothesized that if I could style our brand and web content that would speak directly to these felt needs, we would be able to hit the ground running.",
     ],
-    approachProto:
-      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FbLww2BBvNUsjAAZbIOgu4w%2Fairbnb-redesign%3Fnode-id%3D317%253A1614%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D317%253A1614",
-    approachImgDes: "Figma Airbnb Design System",
-    keyfeatCont: [
-      "Large, easy-to-read text",
-      "Clean and simple layout",
-      "Clear calls to action",
-      "Detailed information about properties and their surroundings, including safety features and nearby amenities",
-      "Intuitive search function",
-    ],
+    approachImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-about.jpg",
+    approachImgDes: "Forward About Page - Meet the Crew",
     ocCont: [
-      "The outcome of the UX/UI redesign for Airbnb is expected to be a welcoming and reliable experience for older women in their sixties, leading to an expansion of the company's customer base. By prioritizing ease of use, accessibility, and a mature and sophisticated look and feel, Airbnb will be well-positioned to attract and retain older women as customers.",
+      " We developed a brand and website that was well-recieved by industrial business leaders and would have been a real contender in their market. Unofrtunately, due to COVID-19, the project was abandoned before we could launch. But I believe Forward would have been successful if it had not been for unforseen circumstances.",
     ],
-    ocProto:
-      "https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2F74IM7vTuezwu4BEJlcWk3L%2F12.3-desktop-prototype%3Fnode-id%3D1%253A19%26scaling%3Dscale-down-width%26page-id%3D0%253A1%26starting-point-node-id%3D1%253A19",
-    ocImgDes: "Figma Airbnb Desktop Prototype",
+    ocImg:
+      "https://davyjonesdesign.github.io/data-for-axios/assets/fwd/fwd-blog-single.jpg",
+    ocImgDes: "Forward Blog Page - Single",
   },
   {
     alias: "sanlo",

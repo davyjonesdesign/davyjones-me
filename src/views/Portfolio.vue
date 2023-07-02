@@ -82,6 +82,14 @@ export default {
           label: "ux/ui design",
         },
         {
+          value: "user research",
+          label: "user research",
+        },
+        {
+          value: "product design",
+          label: "product design",
+        },
+        {
           value: "dev/programming",
           label: "dev/programming",
         },

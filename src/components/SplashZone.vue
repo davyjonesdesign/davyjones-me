@@ -9,10 +9,10 @@
         />
         <div class="home-text">
           <h2>Hey there!</h2>
-          <h4>
+          <p>
             My name is <strong>Davy Jones</strong> and I'm a UX/UI Designer with
             6 years of experience in graphic and web design.
-          </h4>
+          </p>
         </div>
       </div>
       <div class="splash-btns">
